@@ -1,0 +1,167 @@
+@import url("/control_panel/stylesheet/IDsAdmin.css");
+body, html {
+	margin: 0px;
+	padding: 0px;
+	background-color: #e4e4e4;
+}
+a{
+	color:#3c657d;
+}
+h1, th    {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	text-decoration: none;
+	text-align: left;
+	margin: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+}
+h2 {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #ffffff;
+	text-decoration: none;
+	text-align: left;
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	float: left;
+	clear: none;
+	height: 33px;
+}
+a.Top_Nav:link {
+	color: #FFFFFF;
+}
+a.Top_Nav:visited {
+	color: #FFFFFF;
+}
+a.Top_Nav:hover {
+	color: #FFFFFF;
+}
+a.Top_Nav:active {
+	color: #FFFFFF;
+}
+
+input, select, table, p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	text-decoration: none;
+}
+.bg_login{
+	background-image: url(/images/bg_login.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-color: #4f4f4f;
+}
+.hdr_CP{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-image: url(/images/bg_Nav.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: none;
+	border-left: 1px solid #FFFFFF;
+	background-color: #FFFFFF;
+	margin: 0px;
+	height: 21px;
+	width: 199px;
+	text-align: center;
+	display: block;
+	padding: 5px 0px;
+	clear: left;
+	float: left;
+}
+.pane{
+	height:300px;
+	overflow:auto;
+}
+.Tabs p{
+	background-color: #305b75;
+	margin: 5px;
+	padding-top: 5px;
+	height: 20px;
+	width: 75px;
+	cursor:pointer;
+}
+.TotalCell {
+	margin: 0px;
+	clear: none;
+	float: left;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #999999;
+	text-align: center;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-bottom: 5px;
+	padding-left: 0px;
+}
+.TotalCell p {
+	padding: 0px;
+	margin: 0px;
+}
+.TotalCellnoBD {
+	margin: 0px;
+	clear: none;
+	float: left;
+	text-align: right;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-bottom: 5px;
+	padding-left: 0px;
+}
+.TotalCellnoBD p {
+	margin: 0px;
+	padding: 0px;
+}
+
+#pricing-group-header, #pricing-group-body{
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+
+#pricing-group-header label{
+    display: inline-block;
+    width: 171px;
+
+    font-weight: bold;
+
+    color: #808080;
+    clear: both;
+}
+#pricing-group-header>label{
+    margin-bottom: 10px;
+}
+
+#pricing-group-header span, #pricing-group-body span{
+    width: 171px;
+    display: inline-block;
+}

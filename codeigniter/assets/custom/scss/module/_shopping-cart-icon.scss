@@ -1,0 +1,14 @@
+.shopping-cart-icon {
+  position: absolute;
+  display: inline-block;
+  height: 5.73vw;
+  top: 3.47vw;
+  right: 6.67vw;
+  outline: none !important;
+  z-index: 1;
+  &:hover {
+    span, span:before, span:after {
+      background-color: $header-menu-item-font-hover-color;
+    }
+  }
+}

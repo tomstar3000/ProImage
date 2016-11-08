@@ -1,0 +1,52 @@
+/* Layout rules */
+// Layout rules divide the page into sections. 
+// Layouts hold one or more modules together.
+
+footer{
+  /*
+ * Box: display, float, position, left, top, height, width
+ * Border
+ * Background
+ * Text
+ * Other
+*/
+  padding: $footer-top-margin $mobile-gutter $footer-bottom-margin;
+  
+  background-color: $footer-bg;
+
+  font-family: 'Lato', sans-serif;
+  // font-size: 25px;
+  font-size: 3.33vw;
+
+  color: $footer-font-color;
+  // line-height: 35px;
+  line-height: 4.67vw;
+
+  a, a:link, a:visited{
+    color: $footer-font-color;
+  }
+  a:hover, a:active{
+    color: $footer-menu-item-font-hover-color;
+    text-decoration: none;
+  }
+
+  .contact-info, .contact-help{
+    margin-bottom: 8vw;
+    // margin-bottom: 60px;
+  }
+  #footer-menu{
+    font-size: 3vw;
+    // font-size: 22.5px;
+
+    & > li {
+      display: inline-block;
+
+      & + li{
+        /* margin-left: 3.6vw;
+        margin-left: 27px; */
+        margin-left: 2.9vw;
+        // margin-left: 25px;
+      }
+    }
+  }
+}

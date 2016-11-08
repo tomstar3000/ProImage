@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="shortcut icon" href="http://www.proimagesoftware.com/photoexpress.ico" type="image/x-icon" />
+<link rel="icon" href="http://www.proimagesoftware.com/photoexpress.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="robots" content="index,follow" />
+<meta name="keywords" content=""/>
+<meta name="language" content="english"/>
+<meta name="author" content="Pro Image Software" />
+<meta name="copyright" content="2007" />
+<meta name="reply-to" content="info@proimagesoftware.com" />
+<meta name="document-rights" content="Copyrighted Work" />
+<meta name="document-type" content="Web Page" />
+<meta name="document-rating" content="General" />
+<meta name="document-distribution" content="Global" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="Pragma" content="no-cache" />
+<title>ProImageSoftware</title>
+<link href="/stylesheets/photoexpress.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/javascript/GoogleTracker.js"></script>
+<script type="text/javascript" src="/javascript/GoogleTracker2.js"></script>
+<script type="text/JavaScript">
+<!--
+var browser=navigator.appName;
+var b_version=navigator.appVersion;
+var version=parseFloat(b_version.substring(21));
+if(browser=="Microsoft Internet Explorer" && version<7) {
+	document.write('<link href="/stylesheets/ie_6.css" rel="stylesheet" type="text/css" />');
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_validateForm() { //v4.0
+  var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+  for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=MM_findObj(args[i]);
+    if (val) { nm=val.name; if ((val=val.value)!="") {
+      if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+        if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+      } else if (test!='R') { num = parseFloat(val);
+        if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+        if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+          min=test.substring(8,p); max=test.substring(p+1);
+          if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+    } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+  } if (errors) alert('The following error(s) occurred:\n'+errors);
+  document.MM_returnValue = (errors == '');
+}
+//-->
+</script>
+</head>
+<body>
+<div id="Container">
+  <div id="Logo">
+    <div id="Main_Navigation">
+      <ul>
+        <li id="What" class="Nav_Sel"><a href="/index.php">What is it? </a></li>
+        <li id="Services"><a href="/services.php">Services and Features</a></li>
+        <li id="Create"><a href="/join.php">Create A New Account</a></li>
+        <li id="Contact_Us"><a href="/contact_us.php">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="Main_Content">
+    <div id="Main_Text">
+      <h1>404 Not Found </h1>
+      <p>We were unable to find the page that you were looking for.</p>
+    </div>
+    <div id="Event">
+      <h2>Photographer Login </h2>
+      <form action="/control_panel/index.php" name="LogIn_Form" id="LogIn_Form" method="post" enctype="multipart/form-data">
+        <p class="no_indent">
+       
+        <input name="Username" id="Username" type="text" value="username" onclick="javascript:this.value=''" onchange="javascript:document.getElementById('Password').value=''" />
+        <br />
+        <input name="Password" id="Password" type="password" value="password" onclick="javascript:this.value=''" />
+        <input type="hidden" name="Controller" id="Controller" value="true" />
+        <img src="/images/btn_enter.jpg" width="50" height="21" align="absmiddle" onclick="MM_validateForm('Username','','R','Password','','R');if(document.MM_returnValue==true){document.getElementById('LogIn_Form').submit();}" />
+        
+        </p><p><a href="/lookup.php">Forgot Your Password</a> </p>
+        <div style="height:1px; overflow:hidden"><br />
+            <input type="submit" name="btn_submit2" id="btn_submit2" value="submit" />
+        </div>
+      </form>
+      <h2>Photographer Code </h2>
+      <form method="get" name="Photographer_Code_Form" id="Photographer_Code_Form" action="/index.php" enctype="multipart/form-data">
+        <input name="Photographer" id="Photographer" type="text" value="photographer code" onclick="javascript:this.value=''" />
+        <img src="/images/btn_enter.jpg" width="50" height="21" align="absmiddle" onclick="MM_validateForm('Photographer','','R');if(document.MM_returnValue==true){document.getElementById('Photographer_Code_Form').submit();}" style="cursor:pointer;" />
+				<div style="height:1px; overflow:hidden"><br />
+          <input type="submit" name="btn_submit" id="btn_submit" value="submit" />
+        </div>
+      </form>
+    </div>
+    <br clear="all" />
+  </div>
+</div>
+<div id="Footer">
+  <div style="float:left">
+    <p> Photo Express Digital Studio </p>
+  </div>
+  <div style="float:left; margin-left:30px;">
+    <p><a href="mailto:info@nathenjames.com" class="Footer_Nav">info@photoexpressdigitalstudio.com</a></p>
+  </div>
+</div>
+</body>
+</html>

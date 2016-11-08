@@ -1,0 +1,2260 @@
+/* Uploader */
+
+.au-upldr-uploader {
+	border: 1px solid #dbdbdb;
+	background-color: #f7f7f7;
+	font-family: Tahoma, Arial, sans-serif;
+	font-size: 14px;
+	color: #333;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.au-upldr-uploader-bg {
+	opacity: 0.5;
+	background-color: #656565;
+}
+
+
+/* Description editor */
+
+.au-upldr-uploader .au-upldr-description-editor {
+	border: 1px solid #999;
+	background-color: #f7f7f7;
+	border-radius: 3px;
+	box-shadow: 0 0 3px #999;
+}
+
+
+/* Progress dialog */
+
+.au-upldr-uploader .au-upldr-progress-dialog {
+	border: 1px solid #999;
+	background-color: #f7f7f7;
+	border-radius: 3px;
+	box-shadow: 0 0 3px #999;
+}
+
+
+/* Image preview */
+
+.au-upldr-uploader .au-upldr-image-preview, .au-upldr-image-preview {
+}
+
+.au-upldr-image-preview > div {
+}
+
+.au-upldr-empty-canvas{
+
+}
+
+
+.au-upldr-image-preview > div > div {
+	font-weight: bold;
+	padding-top: 5px;
+}
+
+
+/* Top pane*/
+
+.au-upldr-top-pane {
+	border-bottom: 1px solid #dbdbdb;
+	background-color: #f3f3f3;
+}
+
+.au-upldr-top-pane .au-upldr-title {
+	font-size: 120%;
+	margin: 5px 0 10px 0;
+}
+
+.au-upldr-top-pane .au-upldr-change-view .goog-flat-menu-button .goog-flat-menu-button-caption {
+	margin-left: 16px;
+}
+
+.au-upldr-top-pane .au-upldr-change-view .goog-menuitem {
+	padding-left: 20px;
+	padding-right: 3em;
+}
+
+
+/* Information bar */
+
+.au-upldr-information-bar {
+	background-color: #f9e288;
+	-moz-transition: height 0.3s ease;
+	-webkit-transition: height 0.3s ease;
+}
+
+.au-upldr-information-bar-collapsed {
+	-moz-transition: all 0s ease;
+	-webkit-transition: all 0s ease;
+}
+
+
+/* Upload pane */
+
+.au-upldr-upload-pane .au-upldr-list {
+	padding: 0;
+	margin: 0;
+}
+
+.au-upldr-upload-pane .au-upldr-list:focus {
+	outline: none;
+}
+
+.au-upldr-upload-pane .au-upldr-upload-pane-bg {
+	opacity: 0.5;
+	background-color: #656565;
+}
+
+.au-upldr-upload-pane-dragover {
+	background-color: #fff;
+	box-shadow: inset 0 0 15px 15px #f7f7f7;
+}
+
+
+/* Status pane */
+
+.au-upldr-status-pane {
+	border-top: 1px solid #dbdbdb;
+	background-color: #f3f3f3;
+}
+
+
+/* List item */
+
+.au-upldr-list-item {
+	margin-top: 5px;
+	margin-left: 5px;
+	padding: 5px;
+	border: 2px solid transparent;
+	overflow: hidden;
+	cursor: default;
+	border-radius: 3px;
+}
+
+
+/* List item button */
+
+.au-upldr-button-list-item {
+	text-align: center;
+	vertical-align: middle;
+	margin-top: 5px;
+	margin-left: 5px;
+	padding: 5px;
+	border: 1px solid transparent;
+	overflow: hidden;
+	cursor: default;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+
+.au-upldr-button-list-item > .goog-css3-button {
+	margin-top: 20px;
+	min-width: 80%;
+	max-width: 100%;
+}
+
+.au-upldr-button-list-item.au-upldr-icon-list-item > .goog-css3-button {
+	margin-top: 3px;
+}
+
+
+/* Icon list item */
+
+.au-upldr-icon-list-item > .au-upldr-item-content {
+	text-overflow: ellipsis;
+	padding-left: 10px;
+	padding-right: 5px;
+}
+
+
+.au-upldr-icon-list-item-selected {
+	border-color: #999;
+	border-width: 1px;
+	box-shadow: 0 0 3px #999;
+}
+
+.au-upldr-list-item.dragover{
+	border-left: 2px solid black;
+}
+
+.au-upldr-icon-list-item-hover {
+	border-color: #999;
+	box-shadow: 1px 1px 3px #999;
+	-moz-transform: translate(-1px,-1px);
+	-webkit-transform: translate(-1px,-1px);
+	transform: translate(-1px,-1px);
+}
+
+
+/* Tile list item */
+
+.au-upldr-tile-list-item > .au-upldr-item-content .au-upldr-filename {
+	font-size: 110%;
+	font-weight: bold;
+}
+
+.au-upldr-tile-list-item-selected {
+	border-color: #999;
+	box-shadow: 0 0 3px #999;
+}
+
+.au-upldr-tile-list-item-hover {
+	border-color: #999;
+	box-shadow: 1px 1px 3px #999;
+	-moz-transform: translate(-1px,-1px);
+	-webkit-transform: translate(-1px,-1px);
+	transform: translate(-1px,-1px);
+}
+
+
+/* Thumbnail list item */
+
+.au-upldr-thumbnail-list-item {
+	padding-bottom: 20px;
+}
+
+.au-upldr-thumbnail-list-item-selected {
+	border-color: #999;
+	box-shadow: 0 0 3px #999;
+}
+
+.au-upldr-thumbnail-list-item-hover {
+	border-color: #999;
+	box-shadow: 1px 1px 3px #999;
+	-moz-transform: translate(-1px,-1px);
+	-webkit-transform: translate(-1px,-1px);
+	transform: translate(-1px,-1px);
+}
+
+
+/* Progress bar */
+
+.au-upldr-uploader .progress-bar-horizontal {
+	border: 1px solid #949dad;
+	padding: 1px;
+	overflow: hidden;
+	margin: 2px;
+}
+
+.au-upldr-uploader .progress-bar-horizontal {
+	height: 14px;
+}
+
+.au-upldr-uploader .progress-bar-thumb {
+	background: #d4e4ff;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* Tooltip */
+
+.goog-tooltip {
+	min-width: 100px;
+	max-width: 500px;
+	background: infobackground;
+	color: infotext;
+	border: 1px solid infotext;
+	padding: 1px;
+	font: menu;
+	cursor: default;
+}
+
+
+/* Buttons */
+
+.au-upldr-button {
+	width: 16px;
+	height: 16px;
+}
+
+.au-upldr-button-remove {
+	background-position: -16px center;
+}
+
+.au-upldr-css3-toolbar-button-hover .au-upldr-button-remove, .au-upldr-css3-toolbar-button-active .au-upldr-button-remove {
+	background-position: 0px center;
+}
+
+.au-upldr-button-rotate {
+	background-position: -48px center;
+}
+
+.au-upldr-css3-toolbar-button-hover .au-upldr-button-rotate, .au-upldr-css3-toolbar-button-active .au-upldr-button-rotate {
+	background-position: -32px center;
+}
+
+.au-upldr-button-edit-description {
+	background-position: -80px center;
+}
+
+.au-upldr-css3-toolbar-button-hover .au-upldr-button-edit-description, .au-upldr-css3-toolbar-button-active .au-upldr-button-edit-description {
+	background-position: -64px center;
+}
+
+
+/* Toolbar */
+
+.au-upldr-uploader .goog-toolbar {
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 3px #ccc;
+}
+
+
+/* Rectangle selection */
+
+.au-upldr-rectselection {
+	position: absolute;
+	border: 2px solid #1b47e0;
+	background: #1b94e0;
+	opacity: 0.4;
+	margin: 0;
+	padding: 0;
+}
+
+.au-upldr-rectselection-bg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.au-upldr-status-pane.statusBar .leftCeil{
+  vertical-align:middle;
+}
+
+/* Uploader */
+
+.au-upldr-uploader {
+	position: relative;
+}
+
+.au-upldr-uploader-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* Panes */
+
+.au-upldr-uploader-panes {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+.au-upldr-uploader-panes.flexbox {
+	display: -ms-flexbox;
+	-ms-flex-direction: column;
+}
+
+.au-upldr-uploader-panes > div {
+	display: table-row;
+}
+
+.au-upldr-uploader-panes.flexbox > div {
+	display: block;
+}
+
+.au-upldr-uploader-panes.flexbox > div:nth-child(3) {
+	-ms-flex: 1;
+}
+
+.au-upldr-uploader-panes > div > div {
+	display: table-cell;
+	padding: 5px 10px;
+}
+
+.au-upldr-uploader-panes.flexbox > div > div {
+	display: block;
+}
+
+.au-upldr-uploader-panes > div > div.au-upldr-information-bar {
+	display: block;
+	padding: 0px 10px;
+	overflow: hidden;
+}
+
+.au-upldr-uploader-panes > div > div.au-upldr-upload-pane {
+	padding: 0;
+}
+
+
+/* Description editor */
+
+.au-upldr-uploader .au-upldr-description-editor, .au-upldr-description-editor {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	padding: 5px;
+}
+
+.au-upldr-description-editor textarea {
+}
+
+.au-upldr-description-editor > div {
+	text-align: right;
+	text-align: end;
+}
+
+
+/* Progress dialog */
+
+.au-upldr-uploader .au-upldr-progress-dialog, .au-upldr-progress-dialog {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	padding: 5px;
+	min-width: 250px;
+	left: 50%;
+	top: 50%;
+	margin-left: -125px;
+	margin-top: -37px;
+}
+
+.au-upldr-progress-dialog > .au-upldr-label {
+	margin: 5px 2px;
+}
+
+.au-upldr-progress-dialog > div {
+	text-align: right;
+	text-align: end;
+	margin-top: 5px;
+}
+
+
+/* Image preview */
+
+.au-upldr-uploader .au-upldr-image-preview, .au-upldr-image-preview {
+	position: absolute;
+	display: block;
+	overflow: visible;
+	margin: 0 auto;
+	padding: 0;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.au-upldr-image-preview > div {
+	margin: 5px;
+	padding: 5px;
+}
+
+.au-upldr-image-preview > div > img {
+	display: block;
+	margin: 0 auto;
+}
+
+.au-upldr-image-preview > div > div {
+	text-align: center;
+}
+
+
+/* Top pane */
+
+.au-upldr-top-pane {
+}
+
+.au-upldr-top-pane .au-upldr-change-view {
+	float: right;
+	margin-top: 15px;
+}
+
+
+/* Information bar */
+
+.au-upldr-information-bar {
+	height: 30px;
+}
+
+.au-upldr-uploader-panes > div > .au-upldr-information-bar-collapsed {
+	height: 0;
+}
+
+.au-upldr-information-bar .au-upldr-label {
+	vertical-align: middle;
+	line-height: 30px;
+}
+
+.au-upldr-information-bar .goog-css3-button {
+	float: right;
+}
+
+.au-upldr-information-bar-collapsed .goog-css3-button, .au-upldr-information-bar-collapsed .au-upldr-label {
+	display: none;
+}
+
+
+/* Upload pane */
+.au-upldr-upload-pane {
+	height: 100%;
+}
+
+.au-upldr-upload-pane > div {
+	position: relative;
+	height: 100%;
+}
+
+.au-upldr-upload-pane .au-upldr-upload-pane-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* Status pane */
+
+.au-upldr-status-pane {
+}
+
+.au-upldr-status-pane > div:nth-child(2) {
+	display: table;
+	width: 100%;
+}
+
+.au-upldr-status-pane > div:nth-child(2) > div {
+	display: table-cell;
+}
+
+
+/* Upload button container */
+
+.au-upldr-status-pane > div:nth-child(2) > div:nth-child(2) {
+	text-align: right;
+	text-align: end;
+	vertical-align: bottom;
+}
+
+
+/* List */
+
+.au-upldr-list {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	overflow: auto;
+	width: 100%;
+}
+
+.au-upldr-list > li {
+	list-style: none;
+	display: inline-block;
+	vertical-align: top;
+}
+
+
+/* Icon list item */
+
+.au-upldr-icon-list-item {
+	width: 210px;
+}
+
+.au-upldr-icon-list-item > .au-upldr-preview {
+	width: 30px;
+	height: 30px;
+	float: left;
+}
+
+.au-upldr-icon-list-item > .au-upldr-item-content {
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.au-upldr-icon-list-item > .goog-toolbar {
+	float: right;
+	padding: 0;
+}
+
+.au-upldr-icon-list-item > .au-upldr-description-icon {
+	display: none;
+}
+
+
+/* Tile list item */
+
+.au-upldr-tile-list-item {
+	width: 295px;
+	position: relative;
+}
+
+.au-upldr-tile-list-item > .au-upldr-preview {
+	float: left;
+}
+
+.au-upldr-tile-list-item > .au-upldr-item-content {
+	overflow: hidden;
+	white-space: nowrap;
+	padding: 0px 10px;
+}
+
+.au-upldr-tile-list-item > .goog-toolbar {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+}
+
+.au-upldr-tile-list-item > .au-upldr-description-icon {
+	top: 5px;
+	right: 5px;
+}
+
+
+/* Thumbnail list item */
+
+.au-upldr-thumbnail-list-item {
+	position: relative;
+}
+
+.au-upldr-thumbnail-list-item > .au-upldr-preview {
+}
+
+.au-upldr-thumbnail-list-item > .au-upldr-item-content {
+	display: none;
+}
+
+.au-upldr-thumbnail-list-item > .au-upldr-toolbar-outer {
+	position: absolute;
+	bottom: 5px;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+.au-upldr-thumbnail-list-item > .au-upldr-toolbar-outer > .goog-toolbar {
+	display: inline-block;
+}
+
+.au-upldr-thumbnail-list-item > .au-upldr-description-icon {
+	top: 5px;
+	right: 5px;
+}
+
+
+/* Description icon */
+
+.au-upldr-description-icon {
+	position: absolute;
+	width: 16px;
+	height: 18px;
+}
+
+
+/* File Button */
+
+.au-upldr-file-button, .au-upldr-file-link-button {
+	position: relative !important;
+	overflow: hidden !important;
+}
+
+.au-upldr-file-link-button {
+	vertical-align: bottom;
+}
+
+.au-upldr-file-button input[type=file], .au-upldr-file-link-button input[type=file] {
+	position: absolute;
+	top: -20px;
+	right: -20px;
+	opacity: .001;
+	font-size: 150px;
+}
+
+.goog-css3-button input[type=file] {
+	cursor: default;
+}
+
+.goog-link-button input[type=file] {
+	cursor: pointer;
+}
+
+/*
+ * Styles used by au.upldr.ui.Css3ToolbarButtonRenderer.
+ */
+
+.au-upldr-css3-toolbar-button {
+	margin: 0 1px;
+	padding: 3px 4px;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	cursor: default;
+	outline: none;
+	font-family: Arial, sans-serif;
+	color: #333;
+	border: 1px solid transparent;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+
+/* Disabled styles. */
+
+.au-upldr-css3-toolbar-button-disabled {
+	color: #888;
+}
+
+
+/* Hover styles. */
+
+.au-upldr-css3-toolbar-button-hover {
+	/* Hover border style wins over active/checked/selected. */
+	border-color: #a1badf !important;
+}
+
+
+/* Active/checked/selected styles. */
+
+.au-upldr-css3-toolbar-button-active, .au-upldr-css3-toolbar-button-checked, .au-upldr-css3-toolbar-button-selected {
+	/* Active/checked/selected background color always wins. */
+	background-color: #dde1eb !important;
+}
+
+.au-upldr-css3-toolbar-button-active, .au-upldr-css3-toolbar-button-checked, .au-upldr-css3-toolbar-button-selected {
+	border-color: #729bd1;
+}
+
+
+/* Pill (collapsed border) styles. */
+
+.au-upldr-css3-toolbar-button-collapse-right {
+	margin-right: 0;
+}
+
+.au-upldr-css3-toolbar-button-collapse-left {
+	margin-left: 0;
+}
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot.htm?-gntz7h');
+	src:url('../fonts/icomoon.eot.htm?#iefix-gntz7h') format('embedded-opentype'),
+		url('../fonts/icomoon.woff.htm?-gntz7h') format('woff'),
+		url('../fonts/icomoon.ttf.htm?-gntz7h') format('truetype'),
+		url('../fonts/icomoon.svg.htm?-gntz7h#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.au-upldr-icon:before {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	font-size: 1rem;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.au-upldr-icon[class*="generic-file"]:before {
+	content: "\e6bb";
+}
+
+.au-upldr-icon[class*="generic-file"]:before{
+        font-size: 6rem;
+        text-align: center;
+        display: block;
+		color: rgb(163,163,163);
+}
+
+.au-upldr-icon-list-item .au-upldr-icon[class*="generic-file"]:before,
+.au-upldr-icon-list-item .au-upldr-icon.image-file:before
+{
+        font-size: 2rem;
+}
+
+.au-upldr-empty-background[class*="generic-file"]:before{
+        content: "";
+        font-size: 0;
+}
+
+
+.au-upldr-icon.generic-file-dm:before {
+	content: "\e604";
+}
+.au-upldr-icon.generic-file-ds:before {
+	content: "\e609";
+}
+.au-upldr-icon.generic-file-g2:before {
+	content: "\e60a";
+}
+.au-upldr-icon.generic-file-3gp:before {
+	content: "\e60b";
+}
+.au-upldr-icon.generic-file-z:before {
+	content: "\e60c";
+}
+.au-upldr-icon.generic-file-aac:before {
+	content: "\e60d";
+}
+.au-upldr-icon.generic-file-ai:before {
+	content: "\e60e";
+}
+.au-upldr-icon.generic-file-aif:before {
+	content: "\e60f";
+}
+.au-upldr-icon.generic-file-apk:before {
+	content: "\e610";
+}
+.au-upldr-icon.generic-file-app:before {
+	content: "\e611";
+}
+.au-upldr-icon.generic-file-asf:before {
+	content: "\e612";
+}
+.au-upldr-icon.generic-file-asp:before {
+	content: "\e613";
+}
+.au-upldr-icon.generic-file-aspx:before {
+	content: "\e614";
+}
+.au-upldr-icon.generic-file-asx:before {
+	content: "\e615";
+}
+.au-upldr-icon.generic-file-avi:before {
+	content: "\e616";
+}
+.au-upldr-icon.generic-file-bak:before {
+	content: "\e617";
+}
+.au-upldr-icon.generic-file-bat:before {
+	content: "\e618";
+}
+.au-upldr-icon.generic-file-bin:before {
+	content: "\e619";
+}
+.au-upldr-icon.generic-file-bmp:before {
+	content: "\e61a";
+}
+.au-upldr-icon.generic-file-cab:before {
+	content: "\e61b";
+}
+.au-upldr-icon.generic-file-cad:before {
+	content: "\e61c";
+}
+.au-upldr-icon.generic-file-cdr:before {
+	content: "\e61d";
+}
+.au-upldr-icon.generic-file-cer:before {
+	content: "\e61e";
+}
+.au-upldr-icon.generic-file-cfg:before {
+	content: "\e61f";
+}
+.au-upldr-icon.generic-file-cfm:before {
+	content: "\e620";
+}
+.au-upldr-icon.generic-file-cgi:before {
+	content: "\e621";
+}
+.au-upldr-icon.generic-file-class:before {
+	content: "\e622";
+}
+.au-upldr-icon.generic-file-com:before {
+	content: "\e623";
+}
+.au-upldr-icon.generic-file-cpl:before {
+	content: "\e624";
+}
+.au-upldr-icon.generic-file-cpp:before {
+	content: "\e625";
+}
+.au-upldr-icon.generic-file-crx:before {
+	content: "\e626";
+}
+.au-upldr-icon.generic-file-csr:before {
+	content: "\e627";
+}
+.au-upldr-icon.generic-file-css:before {
+	content: "\e628";
+}
+.au-upldr-icon.generic-file-csv:before {
+	content: "\e629";
+}
+.au-upldr-icon.generic-file-cue:before {
+	content: "\e62a";
+}
+.au-upldr-icon.generic-file-cur:before {
+	content: "\e62b";
+}
+.au-upldr-icon.generic-file-dat:before {
+	content: "\e62c";
+}
+.au-upldr-icon.generic-file-db:before {
+	content: "\e62d";
+}
+.au-upldr-icon.generic-file-dbf:before {
+	content: "\e62e";
+}
+.au-upldr-icon.generic-file-dds:before {
+	content: "\e62f";
+}
+.au-upldr-icon.generic-file-dem:before {
+	content: "\e630";
+}
+.au-upldr-icon.generic-file-dll:before {
+	content: "\e631";
+}
+.au-upldr-icon.generic-file-dmg:before {
+	content: "\e632";
+}
+.au-upldr-icon.generic-file-dmp:before {
+	content: "\e633";
+}
+.au-upldr-icon.generic-file-doc:before {
+	content: "\e634";
+}
+.au-upldr-icon.generic-file-docx:before {
+	content: "\e635";
+}
+.au-upldr-icon.generic-file-drv:before {
+	content: "\e636";
+}
+.au-upldr-icon.generic-file-dtd:before {
+	content: "\e637";
+}
+.au-upldr-icon.generic-file-dwg:before {
+	content: "\e638";
+}
+.au-upldr-icon.generic-file-dxf:before {
+	content: "\e639";
+}
+.au-upldr-icon.generic-file-elf:before {
+	content: "\e63a";
+}
+.au-upldr-icon.generic-file-eps:before {
+	content: "\e63b";
+}
+.au-upldr-icon.generic-file-eps:before {
+	content: "\e63c";
+}
+.au-upldr-icon.generic-file-exe:before {
+	content: "\e63d";
+}
+.au-upldr-icon.generic-file-fla:before {
+	content: "\e63e";
+}
+.au-upldr-icon.generic-file-flash:before {
+	content: "\e63f";
+}
+.au-upldr-icon.generic-file-flv:before {
+	content: "\e640";
+}
+.au-upldr-icon.generic-file-fnt:before {
+	content: "\e641";
+}
+.au-upldr-icon.generic-file-fon:before {
+	content: "\e642";
+}
+.au-upldr-icon.generic-file-gam:before {
+	content: "\e643";
+}
+.au-upldr-icon.generic-file-gbr:before {
+	content: "\e644";
+}
+.au-upldr-icon.generic-file-ged:before {
+	content: "\e645";
+}
+.au-upldr-icon.generic-file-gif:before {
+	content: "\e646";
+}
+.au-upldr-icon.generic-file-gpx:before {
+	content: "\e647";
+}
+.au-upldr-icon.generic-file-gz:before {
+	content: "\e648";
+}
+.au-upldr-icon.generic-file-gzip:before {
+	content: "\e649";
+}
+.au-upldr-icon.generic-file-hqz:before {
+	content: "\e64a";
+}
+.au-upldr-icon.generic-file-html:before {
+	content: "\e64b";
+}
+.au-upldr-icon.generic-file-ibooks:before {
+	content: "\e64c";
+}
+.au-upldr-icon.generic-file-icns:before {
+	content: "\e64d";
+}
+.au-upldr-icon.generic-file-ico:before {
+	content: "\e64e";
+}
+.au-upldr-icon.generic-file-ics:before {
+	content: "\e64f";
+}
+.au-upldr-icon.generic-file-iff:before {
+	content: "\e650";
+}
+.au-upldr-icon.generic-file-indd:before {
+	content: "\e651";
+}
+.au-upldr-icon.generic-file-iso:before {
+	content: "\e652";
+}
+.au-upldr-icon.generic-file-iso:before {
+	content: "\e653";
+}
+.au-upldr-icon.generic-file-jar:before {
+	content: "\e654";
+}
+.au-upldr-icon.generic-file-jpg:before {
+	content: "\e655";
+}
+.au-upldr-icon.generic-file-js:before {
+	content: "\e656";
+}
+.au-upldr-icon.generic-file-jsp:before {
+	content: "\e657";
+}
+.au-upldr-icon.generic-file-key:before {
+	content: "\e658";
+}
+.au-upldr-icon.generic-file-kml:before {
+	content: "\e659";
+}
+.au-upldr-icon.generic-file-kmz:before {
+	content: "\e65a";
+}
+.au-upldr-icon.generic-file-lnk:before {
+	content: "\e65b";
+}
+.au-upldr-icon.generic-file-log:before {
+	content: "\e65c";
+}
+.au-upldr-icon.generic-file-lua:before {
+	content: "\e65d";
+}
+.au-upldr-icon.generic-file-m3u:before {
+	content: "\e65e";
+}
+.au-upldr-icon.generic-file-m4a:before {
+	content: "\e65f";
+}
+.au-upldr-icon.generic-file-m4v:before {
+	content: "\e660";
+}
+.au-upldr-icon.generic-file-macho:before {
+	content: "\e661";
+}
+.au-upldr-icon.generic-file-max:before {
+	content: "\e662";
+}
+.au-upldr-icon.generic-file-mdb:before {
+	content: "\e663";
+}
+.au-upldr-icon.generic-file-mdf:before {
+	content: "\e664";
+}
+.au-upldr-icon.generic-file-mid:before {
+	content: "\e665";
+}
+.au-upldr-icon.generic-file-mim:before {
+	content: "\e666";
+}
+.au-upldr-icon.generic-file-mov:before {
+	content: "\e667";
+}
+.au-upldr-icon.generic-file-mp4:before {
+	content: "\e668";
+}
+.au-upldr-icon.generic-file-mp3:before {
+	content: "\e669";
+}
+.au-upldr-icon.generic-file-mpa:before {
+	content: "\e66a";
+}
+.au-upldr-icon.generic-file-mpg:before {
+	content: "\e66b";
+}
+.au-upldr-icon.generic-file-msg:before {
+	content: "\e66c";
+}
+.au-upldr-icon.generic-file-msi:before {
+	content: "\e66d";
+}
+.au-upldr-icon.generic-file-nes:before {
+	content: "\e66e";
+}
+.au-upldr-icon.generic-file-object:before {
+	content: "\e66f";
+}
+.au-upldr-icon.generic-file-odb:before {
+	content: "\e670";
+}
+.au-upldr-icon.generic-file-odc:before {
+	content: "\e671";
+}
+.au-upldr-icon.generic-file-odf:before {
+	content: "\e672";
+}
+.au-upldr-icon.generic-file-odg:before {
+	content: "\e673";
+}
+.au-upldr-icon.generic-file-odi:before {
+	content: "\e674";
+}
+.au-upldr-icon.generic-file-odp:before {
+	content: "\e675";
+}
+.au-upldr-icon.generic-file-ods:before {
+	content: "\e676";
+}
+.au-upldr-icon.generic-file-odt:before {
+	content: "\e677";
+}
+.au-upldr-icon.generic-file-odt:before {
+	content: "\e678";
+}
+.au-upldr-icon.generic-file-odx:before {
+	content: "\e679";
+}
+.au-upldr-icon.generic-file-ogg:before {
+	content: "\e67a";
+}
+.au-upldr-icon.generic-file-otf:before {
+	content: "\e67b";
+}
+.au-upldr-icon.generic-file-otf:before {
+	content: "\e67c";
+}
+.au-upldr-icon.generic-file-pages:before {
+	content: "\e67d";
+}
+.au-upldr-icon.generic-file-pct:before {
+	content: "\e67e";
+}
+.au-upldr-icon.generic-file-pdb:before {
+	content: "\e67f";
+}
+.au-upldr-icon.generic-file-pdf:before {
+	content: "\e680";
+}
+.au-upldr-icon.generic-file-pif:before {
+	content: "\e681";
+}
+.au-upldr-icon.generic-file-pkg:before {
+	content: "\e682";
+}
+.au-upldr-icon.generic-file-pl:before {
+	content: "\e683";
+}
+.au-upldr-icon.generic-file-png:before {
+	content: "\e684";
+}
+.au-upldr-icon.generic-file-pps:before {
+	content: "\e685";
+}
+.au-upldr-icon.generic-file-ppt:before {
+	content: "\e686";
+}
+.au-upldr-icon.generic-file-pptx:before {
+	content: "\e687";
+}
+.au-upldr-icon.generic-file-ps:before {
+	content: "\e688";
+}
+.au-upldr-icon.generic-file-psd:before {
+	content: "\e689";
+}
+.au-upldr-icon.generic-file-pub:before {
+	content: "\e68a";
+}
+.au-upldr-icon.generic-file-python:before {
+	content: "\e68b";
+}
+.au-upldr-icon.generic-file-ra:before {
+	content: "\e68c";
+}
+.au-upldr-icon.generic-file-rar:before {
+	content: "\e68d";
+}
+.au-upldr-icon.generic-file-raw:before {
+	content: "\e68e";
+}
+.au-upldr-icon.generic-file-rm:before {
+	content: "\e68f";
+}
+.au-upldr-icon.generic-file-rom:before {
+	content: "\e690";
+}
+.au-upldr-icon.generic-file-rpm:before {
+	content: "\e691";
+}
+.au-upldr-icon.generic-file-rss:before {
+	content: "\e692";
+}
+.au-upldr-icon.generic-file-rtf:before {
+	content: "\e693";
+}
+.au-upldr-icon.generic-file-sav:before {
+	content: "\e694";
+}
+.au-upldr-icon.generic-file-sdf:before {
+	content: "\e695";
+}
+.au-upldr-icon.generic-file-sitx:before {
+	content: "\e696";
+}
+.au-upldr-icon.generic-file-sql:before {
+	content: "\e697";
+}
+.au-upldr-icon.generic-file-sql:before {
+	content: "\e698";
+}
+.au-upldr-icon.generic-file-srt:before {
+	content: "\e699";
+}
+.au-upldr-icon.generic-file-svg:before {
+	content: "\e69a";
+}
+.au-upldr-icon.generic-file-swf:before {
+	content: "\e69b";
+}
+.au-upldr-icon.generic-file-sys:before {
+	content: "\e69c";
+}
+.au-upldr-icon.generic-file-tar:before {
+	content: "\e69d";
+}
+.au-upldr-icon.generic-file-tex:before {
+	content: "\e69e";
+}
+.au-upldr-icon.generic-file-tga:before {
+	content: "\e69f";
+}
+.au-upldr-icon.generic-file-thm:before {
+	content: "\e6a0";
+}
+.au-upldr-icon.generic-file-tiff:before {
+	content: "\e6a1";
+}
+.au-upldr-icon.generic-file-tmp:before {
+	content: "\e6a2";
+}
+.au-upldr-icon.generic-file-torrent:before {
+	content: "\e6a3";
+}
+.au-upldr-icon.generic-file-ttf:before {
+	content: "\e6a4";
+}
+.au-upldr-icon.generic-file-txt:before {
+	content: "\e6a5";
+}
+.au-upldr-icon.generic-file-uue:before {
+	content: "\e6a6";
+}
+.au-upldr-icon.generic-file-vb:before {
+	content: "\e6a7";
+}
+.au-upldr-icon.generic-file-vcd:before {
+	content: "\e6a8";
+}
+.au-upldr-icon.generic-file-vcf:before {
+	content: "\e6a9";
+}
+.au-upldr-icon.generic-file-vob:before {
+	content: "\e6aa";
+}
+.au-upldr-icon.generic-file-wav:before {
+	content: "\e6ab";
+}
+.au-upldr-icon.generic-file-wma:before {
+	content: "\e6ac";
+}
+.au-upldr-icon.generic-file-wmv:before {
+	content: "\e6ad";
+}
+.au-upldr-icon.generic-file-wpd:before {
+	content: "\e6ae";
+}
+.au-upldr-icon.generic-file-wps:before {
+	content: "\e6af";
+}
+.au-upldr-icon.generic-file-wsf:before {
+	content: "\e6b0";
+}
+.au-upldr-icon.generic-file-xhtml:before {
+	content: "\e6b1";
+}
+.au-upldr-icon.generic-file-xlr:before {
+	content: "\e6b2";
+}
+.au-upldr-icon.generic-file-xls:before {
+	content: "\e6b3";
+}
+.au-upldr-icon.generic-file-xlsx:before {
+	content: "\e6b4";
+}
+.au-upldr-icon.generic-file-xml:before {
+	content: "\e6b5";
+}
+.au-upldr-icon.generic-file-yuv:before {
+	content: "\e6b6";
+}
+.au-upldr-icon.generic-file-zip:before {
+	content: "\e6b7";
+}
+
+.au-upldr-icon.image-file[class*="generic-file"]:before {
+	content: "\e601";
+}
+
+
+
+
+.au-upldr-icon.start-upload:before {
+	content: "\e608";
+	display:none;
+}
+
+.au-upldr-icon.cancel-upload:before {
+	content: "\e6ba";
+    display:none;
+}
+
+.au-upldr-icon.add-desc:before {
+	content: "\e600";
+}
+
+.au-upldr-thumbnail-list-item .au-upldr-icon.with-desc:before ,
+.au-upldr-tile-list-item .au-upldr-icon.with-desc:before 
+{
+	content: "\e602";
+	position: absolute;
+	top: 5px;
+    right: 5px;
+}
+
+.au-upldr-icon.rotate:before {
+	content: "\e605";
+	font-weight: 900;
+}
+.au-upldr-icon.remove-all{
+	margin-left:10px;
+}
+.au-upldr-icon.remove-all.show{
+	display:inline-block;
+}
+.au-upldr-icon.remove-all.hide{
+	display:none;
+}
+.au-upldr-icon.remove-all:before {
+	content: "\e6b8";
+       
+}
+
+.au-upldr-icon.remove:before {
+	content: "\e606";
+	color: rgb(185, 100, 100);
+}
+.au-upldr-icon.add-file:before {
+	content: "\e607";
+	display:none;
+}
+
+
+
+
+/*
+ * Copyright 2009 The Closure Library Authors. All Rights Reserved.
+ *
+ * Use of this source code is governed by the Apache License, Version 2.0.
+ * See the COPYING file for details.
+ */
+
+/*
+ * Cross-browser implementation of the "display: inline-block" CSS property.
+ * See http://www.w3.org/TR/CSS21/visuren.html#propdef-display for details.
+ * Tested on IE 6 & 7, FF 1.5 & 2.0, Safari 2 & 3, Webkit, and Opera 9.
+ *
+ * @author attila@google.com (Attila Bodis)
+ */
+
+/*
+ * Default rule; only Safari, Webkit, and Opera handle it without hacks.
+ */
+.goog-inline-block {
+  position: relative;
+  display: -moz-inline-box; /* Ignored by FF3 and later. */
+  display: inline-block;
+}
+
+/*
+ * Pre-IE7 IE hack.  On IE, "display: inline-block" only gives the element
+ * layout, but doesn't give it inline behavior.  Subsequently setting display
+ * to inline does the trick.
+ */
+* html .goog-inline-block {
+  display: inline;
+}
+
+/*
+ * IE7-only hack.  On IE, "display: inline-block" only gives the element
+ * layout, but doesn't give it inline behavior.  Subsequently setting display
+ * to inline does the trick.
+ */
+*:first-child+html .goog-inline-block {
+  display: inline;
+}
+
+/*
+ * Copyright 2010 The Closure Library Authors. All Rights Reserved.
+ *
+ * Use of this source code is governed by the Apache License, Version 2.0.
+ * See the COPYING file for details.
+ */
+
+/* Author: slightlyoff@google.com (Alex Russell) */
+/* Author: eae@google.com (Emil A Eklund) */
+
+/* Imageless button styles. */
+.goog-css3-button {
+  margin: 0 2px;
+  padding: 3px 6px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  cursor: default;
+  outline: none;
+  font-family: Arial, sans-serif;
+  color: #000;
+  border: 1px solid #bbb;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  /* TODO(eae): Change this to -webkit-linear-gradient once
+                https://bugs.webkit.org/show_bug.cgi?id=28152 is resolved. */
+  background: -webkit-gradient(linear, 0% 40%, 0% 70%, from(#f9f9f9),
+      to(#e3e3e3));
+  background: -moz-linear-gradient(top, #f9f9f9, #e3e3e3);
+}
+
+
+/* Styles for different states (hover, active, focused, open, checked). */
+.goog-css3-button-hover {
+  border-color: #939393 !important;
+}
+
+.goog-css3-button-focused {
+  border-color: #444;
+}
+
+.goog-css3-button-active, .goog-css3-button-open {
+  border-color: #444 !important;
+  background: -webkit-gradient(linear, 0% 40%, 0% 70%, from(#e3e3e3),
+      to(#f9f9f9));
+  background: -moz-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+.goog-css3-button-disabled {
+  color: #888;
+}
+
+.goog-css3-button-primary {
+  font-weight: bold;
+}
+
+
+/*
+ * Pill (collapsed border) styles.
+ */
+.goog-css3-button-collapse-right {
+  margin-right: 0 !important;
+  border-right: 1px solid #bbb;
+  -webkit-border-top-right-radius: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  -moz-border-radius-topright: 0px;
+  -moz-border-radius-bottomright: 0px;
+}
+
+.goog-css3-button-collapse-left {
+  border-left: 1px solid #f9f9f9;
+  margin-left: 0 !important;
+  -webkit-border-top-left-radius: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+  -moz-border-radius-topleft: 0px;
+  -moz-border-radius-bottomleft: 0px;
+}
+
+/*
+ * Copyright 2010 The Closure Library Authors. All Rights Reserved.
+ *
+ * Use of this source code is governed by the Apache License, Version 2.0.
+ * See the COPYING file for details.
+ */
+
+/*
+ * Styling for link buttons created by goog.ui.LinkButtonRenderer.
+ *
+ * @author robbyw@google.com (Robby Walker)
+ */
+
+.goog-link-button {
+  position: relative;
+  color: #00f;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* State: disabled. */
+.goog-link-button-disabled {
+  color: #888;
+  text-decoration: none;
+  cursor: default;
+}
+
+/*
+ * Copyright 2009 The Closure Library Authors. All Rights Reserved.
+ *
+ * Use of this source code is governed by the Apache License, Version 2.0.
+ * See the COPYING file for details.
+ */
+
+/*
+ * Standard styling for menus created by goog.ui.MenuRenderer.
+ *
+ * @author attila@google.com (Attila Bodis)
+ */
+
+
+.goog-menu {
+  background: #fff;
+  border-color: #ccc #666 #666 #ccc;
+  border-style: solid;
+  border-width: 1px;
+  cursor: default;
+  font: normal 13px Arial, sans-serif;
+  margin: 0;
+  outline: none;
+  padding: 4px 0;
+  position: absolute;
+  z-index: 20000; /* Arbitrary, but some apps depend on it... */
+}
+
+/*
+ * Copyright 2009 The Closure Library Authors. All Rights Reserved.
+ *
+ * Use of this source code is governed by the Apache License, Version 2.0.
+ * See the COPYING file for details.
+ */
+
+/*
+ * Standard styling for menus created by goog.ui.MenuItemRenderer.
+ *
+ * @author attila@google.com (Attila Bodis)
+ */
+
+
+/* State: resting. */
+.goog-menuitem {
+  color: #000;
+  font: normal 13px Arial, sans-serif;
+  list-style: none;
+  margin: 0;
+  /* 28px on the left for icon or checkbox; 7em on the right for shortcut. */
+  padding: 4px 7em 4px 28px;
+  white-space: nowrap;
+}
+
+/* If a menu doesn't have checkable items or items with icons, remove padding. */
+.goog-menu-nocheckbox .goog-menuitem,
+.goog-menu-noicon .goog-menuitem {
+  padding-left: 12px;
+}
+
+/*
+ * If a menu doesn't have items with shortcuts, leave just enough room for
+ * submenu arrows, if they are rendered.
+ */
+.goog-menu-noaccel .goog-menuitem {
+  padding-right: 20px;
+}
+
+.goog-menuitem-content {
+  color: #000;
+  font: normal 13px Arial, sans-serif;
+}
+
+/* State: disabled. */
+.goog-menuitem-disabled .goog-menuitem-accel,
+.goog-menuitem-disabled .goog-menuitem-content {
+  color: #ccc !important;
+}
+.goog-menuitem-disabled .goog-menuitem-icon {
+  opacity: 0.3;
+  -moz-opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+
+/* State: hover. */
+.goog-menuitem-highlight,
+.goog-menuitem-hover {
+  background-color: #d6e9f8;
+  /* Use an explicit top and bottom border so that the selection is visible
+   * in high contrast mode. */
+  border-color: #d6e9f8;
+  border-style: dotted;
+  border-width: 1px 0;
+  padding-bottom: 3px;
+  padding-top: 3px;
+}
+
+/* State: selected/checked. */
+.goog-menuitem-checkbox,
+.goog-menuitem-icon {
+  background-repeat: no-repeat;
+  height: 16px;
+  left: 6px;
+  position: absolute;
+  right: auto;
+  vertical-align: middle;
+  width: 16px;
+}
+.goog-option-selected .goog-menuitem-checkbox,
+.goog-option-selected .goog-menuitem-icon {
+  /* Client apps may override the URL at which they serve the sprite. */
+  background: url(//ssl.gstatic.com/editor/editortoolbar.png) no-repeat -512px 0;
+}
+
+/* Keyboard shortcut ("accelerator") style. */
+.goog-menuitem-accel {
+  color: #999;
+  /* Keyboard shortcuts are untranslated; always left-to-right. */
+  /* @noflip */ direction: ltr;
+  left: auto;
+  padding: 0 6px;
+  position: absolute;
+  right: 0;
+  text-align: right;
+}
+
+/* Mnemonic styles. */
+.goog-menuitem-mnemonic-hint {
+  text-decoration: underline;
+}
+
+.goog-menuitem-mnemonic-separator {
+  color: #999;
+  font-size: 12px;
+  padding-left: 4px;
+}
+
+/*
+ * Copyright 2009 The Closure Library Authors. All Rights Reserved.
+ *
+ * Use of this source code is governed by the Apache License, Version 2.0.
+ * See the COPYING file for details.
+ */
+
+/*
+ * Standard styling for buttons created by goog.ui.FlatMenuButtonRenderer.
+ *
+ * @author attila@google.com (Attila Bodis)
+ * @author tlb@google.com (Thierry Le Boulenge)
+ */
+
+
+.goog-flat-menu-button {
+  background-color: #fff;
+  border: 1px solid #c9c9c9;
+  color: #333;
+  cursor: pointer;
+  font: normal 95%;
+  list-style: none;
+  margin: 0 2px;
+  outline: none;
+  padding: 1px 4px;
+  position: relative;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.goog-flat-menu-button-disabled * {
+  border-color: #ccc;
+  color: #999;
+  cursor: default;
+}
+
+.goog-flat-menu-button-hover {
+  border-color: #9cf #69e #69e #7af !important; /* Hover border wins. */
+}
+
+.goog-flat-menu-button-active {
+  background-color: #bbb;
+  background-position: bottom left;
+}
+
+.goog-flat-menu-button-focused {
+  border-color: #bbb;
+}
+
+.goog-flat-menu-button-caption {
+  padding-right: 10px;
+  vertical-align: top;
+}
+
+.goog-flat-menu-button-dropdown {
+  /* Client apps may override the URL at which they serve the sprite. */
+  background: url(//ssl.gstatic.com/editor/editortoolbar.png) no-repeat -388px 0;
+  position: absolute;
+  right: 2px;
+  top: 0;
+  vertical-align: top;
+  width: 7px;
+}
+
+/*
+ * Copyright 2009 The Closure Library Authors. All Rights Reserved.
+ *
+ * Use of this source code is governed by the Apache License, Version 2.0.
+ * See the COPYING file for details.
+ */
+
+/*
+ * Standard styling for toolbars and toolbar items.
+ *
+ * @author attila@google.com (Attila Bodis)
+ */
+
+
+/*
+ * Styles used by goog.ui.ToolbarRenderer.
+ */
+
+.goog-toolbar {
+  /* Client apps may override the URL at which they serve the image. */
+  background: #fafafa url(//ssl.gstatic.com/editor/toolbar-bg.png) repeat-x bottom left;
+  border-bottom: 1px solid #d5d5d5;
+  cursor: default;
+  font: normal 12px Arial, sans-serif;
+  margin: 0;
+  outline: none;
+  padding: 2px;
+  position: relative;
+  zoom: 1; /* The toolbar element must have layout on IE. */
+}
+
+/*
+ * Styles used by goog.ui.ToolbarButtonRenderer.
+ */
+
+.goog-toolbar-button {
+  margin: 0 2px;
+  border: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  text-decoration: none;
+  list-style: none;
+  vertical-align: middle;
+  cursor: default;
+  outline: none;
+}
+
+/* Pseudo-rounded corners. */
+.goog-toolbar-button-outer-box,
+.goog-toolbar-button-inner-box {
+  border: 0;
+  vertical-align: top;
+}
+
+.goog-toolbar-button-outer-box {
+  margin: 0;
+  padding: 1px 0;
+}
+
+.goog-toolbar-button-inner-box {
+  margin: 0 -1px;
+  padding: 3px 4px;
+}
+
+/* Pre-IE7 IE hack; ignored by IE7 and all non-IE browsers. */
+* html .goog-toolbar-button-inner-box {
+  /* IE6 needs to have the box shifted to make the borders line up. */
+  left: -1px;
+}
+
+/* Pre-IE7 BiDi fixes. */
+* html .goog-toolbar-button-rtl .goog-toolbar-button-outer-box {
+  /* @noflip */ left: -1px;
+}
+* html .goog-toolbar-button-rtl .goog-toolbar-button-inner-box {
+  /* @noflip */ right: auto;
+}
+
+
+/* IE7-only hack; ignored by all other browsers. */
+*:first-child+html .goog-toolbar-button-inner-box {
+  /* IE7 needs to have the box shifted to make the borders line up. */
+  left: -1px;
+}
+
+/* IE7 BiDi fix. */
+*:first-child+html .goog-toolbar-button-rtl .goog-toolbar-button-inner-box {
+  /* @noflip */ left: 1px;
+  /* @noflip */ right: auto;
+}
+
+/* Safari-only hacks. */
+::root .goog-toolbar-button,
+::root .goog-toolbar-button-outer-box {
+  /* Required to make pseudo-rounded corners work on Safari. */
+  line-height: 0;
+}
+
+::root .goog-toolbar-button-inner-box {
+  /* Required to make pseudo-rounded corners work on Safari. */
+  line-height: normal;
+}
+
+/* Disabled styles. */
+.goog-toolbar-button-disabled {
+  opacity: 0.3;
+  -moz-opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+
+.goog-toolbar-button-disabled .goog-toolbar-button-outer-box,
+.goog-toolbar-button-disabled .goog-toolbar-button-inner-box {
+  /* Disabled text/border color trumps everything else. */
+  color: #333 !important;
+  border-color: #999 !important;
+}
+
+/* Pre-IE7 IE hack; ignored by IE7 and all non-IE browsers. */
+* html .goog-toolbar-button-disabled {
+  /* IE can't apply alpha to an element with a transparent background... */
+  background-color: #f0f0f0;
+  margin: 0 1px;
+  padding: 0 1px;
+}
+
+/* IE7-only hack; ignored by all other browsers. */
+*:first-child+html .goog-toolbar-button-disabled {
+  /* IE can't apply alpha to an element with a transparent background... */
+  background-color: #f0f0f0;
+  margin: 0 1px;
+  padding: 0 1px;
+}
+
+/* Only draw borders when in a non-default state. */
+.goog-toolbar-button-hover .goog-toolbar-button-outer-box,
+.goog-toolbar-button-active .goog-toolbar-button-outer-box,
+.goog-toolbar-button-checked .goog-toolbar-button-outer-box,
+.goog-toolbar-button-selected .goog-toolbar-button-outer-box {
+  border-width: 1px 0;
+  border-style: solid;
+  padding: 0;
+}
+
+.goog-toolbar-button-hover .goog-toolbar-button-inner-box,
+.goog-toolbar-button-active .goog-toolbar-button-inner-box,
+.goog-toolbar-button-checked .goog-toolbar-button-inner-box,
+.goog-toolbar-button-selected .goog-toolbar-button-inner-box {
+  border-width: 0 1px;
+  border-style: solid;
+  padding: 3px;
+}
+
+/* Hover styles. */
+.goog-toolbar-button-hover .goog-toolbar-button-outer-box,
+.goog-toolbar-button-hover .goog-toolbar-button-inner-box {
+  /* Hover border style wins over active/checked/selected. */
+  border-color: #a1badf !important;
+}
+
+/* Active/checked/selected styles. */
+.goog-toolbar-button-active,
+.goog-toolbar-button-checked,
+.goog-toolbar-button-selected {
+  /* Active/checked/selected background color always wins. */
+  background-color: #dde1eb !important;
+}
+
+.goog-toolbar-button-active .goog-toolbar-button-outer-box,
+.goog-toolbar-button-active .goog-toolbar-button-inner-box,
+.goog-toolbar-button-checked .goog-toolbar-button-outer-box,
+.goog-toolbar-button-checked .goog-toolbar-button-inner-box,
+.goog-toolbar-button-selected .goog-toolbar-button-outer-box,
+.goog-toolbar-button-selected .goog-toolbar-button-inner-box {
+  border-color: #729bd1;
+}
+
+/* Pill (collapsed border) styles. */
+.goog-toolbar-button-collapse-right,
+.goog-toolbar-button-collapse-right .goog-toolbar-button-outer-box,
+.goog-toolbar-button-collapse-right .goog-toolbar-button-inner-box {
+  margin-right: 0;
+}
+
+.goog-toolbar-button-collapse-left,
+.goog-toolbar-button-collapse-left .goog-toolbar-button-outer-box,
+.goog-toolbar-button-collapse-left .goog-toolbar-button-inner-box {
+  margin-left: 0;
+}
+
+/* Pre-IE7 IE hack; ignored by IE7 and all non-IE browsers. */
+* html .goog-toolbar-button-collapse-left .goog-toolbar-button-inner-box {
+  left: 0;
+}
+
+/* IE7-only hack; ignored by all other browsers. */
+*:first-child+html .goog-toolbar-button-collapse-left
+.goog-toolbar-button-inner-box {
+  left: 0;
+}
+
+
+/*
+ * Styles used by goog.ui.ToolbarMenuButtonRenderer.
+ */
+
+.goog-toolbar-menu-button {
+  margin: 0 2px;
+  border: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  text-decoration: none;
+  list-style: none;
+  vertical-align: middle;
+  cursor: default;
+  outline: none;
+}
+
+/* Pseudo-rounded corners. */
+.goog-toolbar-menu-button-outer-box,
+.goog-toolbar-menu-button-inner-box {
+  border: 0;
+  vertical-align: top;
+}
+
+.goog-toolbar-menu-button-outer-box {
+  margin: 0;
+  padding: 1px 0;
+}
+
+.goog-toolbar-menu-button-inner-box {
+  margin: 0 -1px;
+  padding: 3px 4px;
+}
+
+/* Pre-IE7 IE hack; ignored by IE7 and all non-IE browsers. */
+* html .goog-toolbar-menu-button-inner-box {
+  /* IE6 needs to have the box shifted to make the borders line up. */
+  left: -1px;
+}
+
+/* Pre-IE7 BiDi fixes. */
+* html .goog-toolbar-menu-button-rtl .goog-toolbar-menu-button-outer-box {
+  /* @noflip */ left: -1px;
+}
+* html .goog-toolbar-menu-button-rtl .goog-toolbar-menu-button-inner-box {
+  /* @noflip */ right: auto;
+}
+
+/* IE7-only hack; ignored by all other browsers. */
+*:first-child+html .goog-toolbar-menu-button-inner-box {
+  /* IE7 needs to have the box shifted to make the borders line up. */
+  left: -1px;
+}
+
+/* IE7 BiDi fix. */
+*:first-child+html .goog-toolbar-menu-button-rtl
+  .goog-toolbar-menu-button-inner-box {
+  /* @noflip */ left: 1px;
+  /* @noflip */ right: auto;
+}
+
+/* Safari-only hacks. */
+::root .goog-toolbar-menu-button,
+::root .goog-toolbar-menu-button-outer-box,
+::root .goog-toolbar-menu-button-inner-box {
+  /* Required to make pseudo-rounded corners work on Safari. */
+  line-height: 0;
+}
+
+::root .goog-toolbar-menu-button-caption,
+::root .goog-toolbar-menu-button-dropdown {
+  /* Required to make pseudo-rounded corners work on Safari. */
+  line-height: normal;
+}
+
+/* Disabled styles. */
+.goog-toolbar-menu-button-disabled {
+  opacity: 0.3;
+  -moz-opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+
+.goog-toolbar-menu-button-disabled .goog-toolbar-menu-button-outer-box,
+.goog-toolbar-menu-button-disabled .goog-toolbar-menu-button-inner-box {
+  /* Disabled text/border color trumps everything else. */
+  color: #333 !important;
+  border-color: #999 !important;
+}
+
+/* Pre-IE7 IE hack; ignored by IE7 and all non-IE browsers. */
+* html .goog-toolbar-menu-button-disabled {
+  /* IE can't apply alpha to an element with a transparent background... */
+  background-color: #f0f0f0;
+  margin: 0 1px;
+  padding: 0 1px;
+}
+
+/* IE7-only hack; ignored by all other browsers. */
+*:first-child+html .goog-toolbar-menu-button-disabled {
+  /* IE can't apply alpha to an element with a transparent background... */
+  background-color: #f0f0f0;
+  margin: 0 1px;
+  padding: 0 1px;
+}
+
+/* Only draw borders when in a non-default state. */
+.goog-toolbar-menu-button-hover .goog-toolbar-menu-button-outer-box,
+.goog-toolbar-menu-button-active .goog-toolbar-menu-button-outer-box,
+.goog-toolbar-menu-button-open .goog-toolbar-menu-button-outer-box {
+  border-width: 1px 0;
+  border-style: solid;
+  padding: 0;
+}
+
+.goog-toolbar-menu-button-hover .goog-toolbar-menu-button-inner-box,
+.goog-toolbar-menu-button-active .goog-toolbar-menu-button-inner-box,
+.goog-toolbar-menu-button-open .goog-toolbar-menu-button-inner-box {
+  border-width: 0 1px;
+  border-style: solid;
+  padding: 3px;
+}
+
+/* Hover styles. */
+.goog-toolbar-menu-button-hover .goog-toolbar-menu-button-outer-box,
+.goog-toolbar-menu-button-hover .goog-toolbar-menu-button-inner-box {
+  /* Hover border color trumps active/open style. */
+  border-color: #a1badf !important;
+}
+
+/* Active/open styles. */
+.goog-toolbar-menu-button-active,
+.goog-toolbar-menu-button-open {
+  /* Active/open background color wins. */
+  background-color: #dde1eb !important;
+}
+
+.goog-toolbar-menu-button-active .goog-toolbar-menu-button-outer-box,
+.goog-toolbar-menu-button-active .goog-toolbar-menu-button-inner-box,
+.goog-toolbar-menu-button-open .goog-toolbar-menu-button-outer-box,
+.goog-toolbar-menu-button-open .goog-toolbar-menu-button-inner-box {
+  border-color: #729bd1;
+}
+
+/* Menu button caption style. */
+.goog-toolbar-menu-button-caption {
+  padding: 0 4px 0 0;
+  vertical-align: middle;
+}
+
+/* Dropdown style. */
+.goog-toolbar-menu-button-dropdown {
+  width: 7px;
+  /* Client apps may override the URL at which they serve the sprite. */
+  background: url(//ssl.gstatic.com/editor/editortoolbar.png) no-repeat -388px 0;
+  vertical-align: middle;
+}
+
+
+/*
+ * Styles used by goog.ui.ToolbarSeparatorRenderer.
+ */
+
+.goog-toolbar-separator {
+  margin: 0 2px;
+  border-left: 1px solid #d6d6d6;
+  border-right: 1px solid #f7f7f7;
+  padding: 0;
+  width: 0;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  vertical-align: middle;
+  line-height: normal;
+  font-size: 120%;
+  overflow: hidden;
+}
+
+
+/*
+ * Additional styling for toolbar select controls, which always have borders.
+ */
+
+.goog-toolbar-select .goog-toolbar-menu-button-outer-box {
+  border-width: 1px 0;
+  border-style: solid;
+  padding: 0;
+}
+
+.goog-toolbar-select .goog-toolbar-menu-button-inner-box {
+  border-width: 0 1px;
+  border-style: solid;
+  padding: 3px;
+}
+
+.goog-toolbar-select .goog-toolbar-menu-button-outer-box,
+.goog-toolbar-select .goog-toolbar-menu-button-inner-box {
+  border-color: #bfcbdf;
+}
+
+@media screen and (max-width:800px) {
+
+	/* Fixing internal upload panel width */
+	.au-upldr-uploader {
+		min-width: 268px;
+	}
+
+	/*Hiding top panel */
+	.au-upldr-top-pane {
+		display:none !important;
+	}  
+
+	/* Fixing scroll behaviour on a mobile browser */
+	.au-upldr-list{   
+		overflow-y: scroll; 
+		-webkit-overflow-scrolling:touch;
+	}
+  
+	/* Customizing the Upload button */
+	.sendButton {
+		min-width: 80px; 
+		min-height: 40px;
+		vertical-align:middle;
+		line-height:20px;
+	}
+
+    .au-upldr-icon.cancel-upload:before {
+        display: block;
+    }
+  
+	.au-upldr-icon.start-upload:before {
+		display: block;
+		font-size: 24pt;
+	}
+
+
+	/* Adding a grey background to all items in the upload list */
+	.au-upldr-list-item, .au-upldr-button-list-item {
+		background-color: #e8e8e8;
+	}
+
+	/* General button changes */
+	
+	.au-upldr-button-list-item {
+		border: 2px solid transparent !important;
+	}
+	.au-upldr-button-list-item  >.goog-css3-button {
+		margin-top: 10px !important;
+		margin-bottom: 10px;
+		text-align:center;vertical-align:middle;line-height:100px;
+	}
+
+	/* 
+		Remove text caption from the Add more files button (we want to display + icon there instead) 
+		If you want to remove a label from the Upload button as well, add .sendFilesButtonText to this selector.
+	*/ 
+	.addFilesButtonText {display: none;}
+
+	
+	/* Modifying Tiles mode */ 
+  
+	.au-upldr-tile-list-item {
+		width: 45%;
+		min-width:250px;
+	}
+
+	.au-upldr-tiles-list-item.au-upldr-button-list-item  {
+		min-width: 250px;
+		min-height: 100px;
+		border: 2px solid transparent !important;
+	}
+
+	.au-upldr-tile-list-item > .au-upldr-icon.add-file:before 
+	{
+		display: block;
+		font-size: 36pt;
+		padding: 15px;
+	}
+
+	/* Modifying Thumbnails mode */
+	
+	.au-upldr-thumbnail-list-item {
+		vertical-align: middle;
+		line-height: 22px;
+	}
+
+	.au-upldr-thumbnail-list-item.au-upldr-button-list-item {
+		min-width: 120px;
+		min-height: 120px;
+		padding-bottom: 12px !important;
+		padding-top: 12px !important;
+		border: 2px solid transparent;
+	}
+	
+	.au-upldr-thumbnail-list-item > .au-upldr-icon.add-file:before 
+	{
+		display: block;
+		font-size: 32pt;
+		padding: 15px;
+	}
+
+   
+	/* Modifying Icons mode */
+
+	.au-upldr-icons-list-item.au-upldr-button-list-item  {
+		min-width: 250px;
+		min-height: 30px;
+		border: 2px solid transparent !important;
+	}
+   
+	.au-upldr-icon-list-item > .au-upldr-icon.add-file:before 
+	{
+		display: block;
+		font-size: 24pt;
+		padding: 5px;
+	}
+
+    .goog-tooltip {
+        display:none;
+    }
+
+    li[class*=list-item-hover] {
+         border-color: transparent;
+	     box-shadow: none;
+	    -moz-transform: translate(0,0);
+	    -webkit-transform: translate(0,0);
+	    transform: translate(0,0);
+    }
+
+    li[class*=list-item-hover][class*=list-item-selected]{
+        border-color: #999;
+	    box-shadow: 0 0 3px #999;
+    }
+
+}

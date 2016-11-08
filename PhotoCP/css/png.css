@@ -1,0 +1,217 @@
+@charset "utf-8";
+/* CSS Document */
+
+#Navigation #Logo a {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/Logo.png');
+	cursor:pointer;
+}
+#LeftPanel ul li a div {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/blt_nav.png');
+}
+#LeftPanel ul #BtnEvntOver a div {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/btn_Event_Overview.png');
+}
+#LeftPanel ul #BtnImagesGroups a div {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/btn_ImageGroups.png');
+}
+#LeftPanel ul #BtnEvntPresnt a div {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/btn_EventPresentation.png');
+}
+#LeftPanel ul #BtnEvntMarket a div {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/btn_Event_Marketing.png');
+}
+#LeftPanel ul #BtnEvntGuest a div {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/btn_Event_Guestbook.png');
+}
+#LeftPanel ul #BtnEvntMusic a div {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/btn_Event_Music.png');
+}
+#LeftPanel ul #BtnEvntReprt a div {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/btn_Event_Reports.png');
+}
+#LeftPanel #NavBottom {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/bg_LeftNav_bottom.png');
+	font-size:1px;
+}
+#MainNav #Left {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/bg_MainNav_left.png');
+}
+#MainNav #Right {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/bg_MainNav_right.png');
+}
+#MainNav #Space #PhotoIcn {
+	margin-left:5px;
+}
+#MainNav #Space #PhotoIcn div {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/bd_icn.png');
+}
+#MainNav #Space #StorageBar {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/storage_bar_border.png');
+}
+#MainNav #Space #StorageBar div {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/storage_bar.png');
+}
+#Navigation ul #BtnHome a {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/btn_Home.png');
+	cursor:pointer;
+}
+#Navigation ul #BtnComm a {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/btn_Community.png');
+	cursor:pointer;
+}
+#Navigation ul #BtnProd a {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/btn_Products.png');
+	cursor:pointer;
+}
+#Navigation ul #BtnSupp a {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/btn_Support.png');
+	cursor:pointer;
+}
+#Navigation ul #BtnLog a {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/btn_LogOut.png');
+	cursor:pointer;
+}
+#MainNav #SearchL {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/bg_Search_left.png');
+}
+#MainNav #SearchR {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/bg_Search_right.png');
+	cursor:pointer;
+}
+#MainNav #SearchR a {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/btn_Search.png');
+	cursor:pointer;
+	margin-left:5px;
+	margin-top:-5px;
+}
+#MainNav #BdBtm {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='/PhotoCP/images/bd_MainNav.png');
+}
+#MainNav #BdBtmR {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/bd_MainNav_right.png');
+}
+#MainNav form {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='/PhotoCP/images/bg_Search.png');
+}
+#HdrType1 {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/bg_Hdr_1.png');
+	border: none;
+}
+#HdrType1 div {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 57px;
+}
+#HdrType2 {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/bg_Hdr_1.png');
+	border: none;
+}
+#HdrType2 div {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 57px;
+}
+#RecordTable #Records {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='/PhotoCP/images/bg_RecordTable.png');
+}
+#RecordTable #Top {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/bd_Record_Top.png');
+	font-size: 1px;
+}
+#RecordTable #Bottom {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/bd_Record_Bottom.png');
+	font-size: 1px;
+}
+#RecordTable #Ftr {
+	width: 724px;
+}
+#RecordTable #Ftr #Total {
+	text-align: right;
+	margin-top: 3px;
+	margin-right: 5px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 0px;
+	padding-right: 40px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+#RecordTable #Ftr #Total strong {
+	padding:0px;
+	background:none;
+	margin-top: -15px;
+	margin-right: -20px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+.S116 input {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/bg_btn_116.png');
+	cursor:pointer;
+}
+.S100 input {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/bg_btn_100.png');
+	cursor:pointer;
+}
+.EvntToolCntr div {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/icn_EvntToolCntr.png');
+}
+.HotMenu div {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/icn_Tool_Center.png');
+}
+.NewsEvents div {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/icn_Rcnt_News.png');
+}
+.RcntOrd div {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/icn_Recent_Orders.png');
+}
+.UpcmngEvnt div {
+	background:none;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/PhotoCP/images/icn_Evnt_Cal.png');
+}

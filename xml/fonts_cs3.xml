@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fonts name="Font List">
+  <data>
+    <font id="1" file="TT1102M_.TTF" bold="TT1103M_.TTF" italic="None" bolditalic="None" src="AachenBT.swf" face="Aachen BT"></font>
+    <font id="2" file="ABRAZ1.TTF" bold="ABRAZ3.TTF" italic="ABRAZ2.TTF" bolditalic="ABRAZ4.TTF" src="AbrazoScriptSSi.swf" face="Abrazo Script SSi"></font>
+    <font id="3" file="ARIA.TTF" bold="None" italic="None" bolditalic="None" src="Aria.swf" face="Aria Script SSi"></font>
+    <font id="4" file="arial.ttf" bold="arialbd.ttf" italic="ariali.ttf" bolditalic="arialbi.ttf" src="Arial.swf" face="Arial"></font>
+    <font id="5" file="ARTDECO.TTF" bold="None" italic="None" bolditalic="None" src="ArtDeco.swf" face="Art Devo SSi"></font>
+    <font id="6" file="ASTU7.TTF" bold="None" italic="ASTU8.TTF" bolditalic="None" src="AstuteLight.swf" face="Astute Light SSi Light"></font>
+    <font id="7" file="BAUDE.TTF" bold="None" italic="None" bolditalic="None" src="BauderieScript.swf" face="Bauderie Script SSi"></font>
+    <font id="8" file="BTIE1.TTF" bold="None" italic="None" bolditalic="None" src="BlackTieDisplay.swf" face="Black Tie Display SSi"></font>
+    <font id="9" file="BTIE2.TTF" bold="None" italic="None" bolditalic="None" src="BlackTieEngravedDisplay.swf" face="Black Tie Engraved Display SSi"></font>
+    <font id="10" file="BOOKM7.TTF" bold="None" italic="BOOKM8.TTF" bolditalic="None" src="BookmanLight.swf" face="Bookman Light SSi"></font>
+    <font id="11" file="BRAVO.TTF" bold="None" italic="None" bolditalic="None" src="BravoScript.swf" face="Bravo Script SSi"></font>
+    <font id="12" file="B034000D.TTF" bold="None" italic="None" bolditalic="None" src="BroadwayEngD.swf" face="Broadway EngD"></font>
+    <font id="13" file="B023000D.TTF" bold="None" italic="None" bolditalic="None" src="Brush.swf" face="Brush ScrD"></font>
+    <font id="14" file="BOO.TTF" bold="None" italic="None" bolditalic="None" src="Bugaboo.swf" face="Bugaboo SSi"></font>
+    <font id="15" file="C073000D.TTF" bold="None" italic="None" bolditalic="None" src="Cargo.swf" face="CargoD"></font>
+    <font id="16" file="CARMEL.TTF" bold="None" italic="None" bolditalic="None" src="CarmelScript.swf" face="Carmel Script SSi"></font>
+    <font id="17" file="C079C33D.TTF" bold="None" italic="None" bolditalic="None" src="CaslonNo540.swf" face="CaslonNO540 SwaAltD, Italic"></font>
+    <font id="18" file="CLA1.TTF" bold="CLA3.TTF" italic="CLA2.TTF" bolditalic="None" src="Classic.swf" face="Classic SSi"></font>
+    <font id="19" file="DEU7.TTF" bold="None" italic="DEU8.TTF" bolditalic="None" src="DeutchLight.swf" face="Deutch Light SSi"></font>
+    <font id="20" file="E006J04T.TTF" bold="None" italic="None" bolditalic="None" src="EnglisheSch.swf" face="Englische SchJoitDemBo"></font>
+    <font id="21" file="FACI1.TTF" bold="FACI3.TTF" italic="FACI2.TTF" bolditalic="None" src="FacileSSi.swf" face="Facile SSi"></font>
+    <font id="22" file="FGRADE.TTF" bold="None" italic="None" bolditalic="None" src="FirstGradeDisplay.swf" face="First Grade Display Caps SSi"></font>
+    <font id="23" file="GARA1.TTF" bold="GARA3.TTF" italic="GARA2.TTF" bolditalic="None" src="FlorentineGaramond.swf" face="Florentine Garamond SSi"></font>
+    <font id="24" file="TT1043M_.TTF" bold="None" italic="None" bolditalic="None" src="Freehand.swf" face="Freehand 591 Bt"></font>
+    <font id="25" file="G047A32T.TTF" bold="None" italic="None" bolditalic="None" src="GoudySwa.swf" face="Goudy SwaTLig, Italic"></font>
+    <font id="26" file="HELI1.TTF" bold="HELI2.TTF" italic="None" bolditalic="None" src="Helios.swf" face="Helios SSi"></font>
+    <font id="27" file="HOR_RG.TTF" bold="HOR_BD.TTF" italic="HOR_IT.TTF" bolditalic="HOR_BI.TTF" src="HorleyOld.swf" face="Horley Old Style MT"></font>
+    <font id="28" file="JOUR.TTF" bold="None" italic="None" bolditalic="None" src="JournalScript.swf" face="Journal Script SSi"></font>
+    <font id="29" file="KARAVAN.TTF" bold="None" italic="None" bolditalic="None" src="KaravanDisplay.swf" face="Karavan Display SSi"></font>
+    <font id="30" file="KEYEL1.TTF" bold="KEYEL3.TTF" italic="KEYEL2.TTF" bolditalic="KEYEL4.TTF" src="KeyboardElite.swf" face="Keyboard Elite SSi"></font>
+    <font id="31" file="KUDO10.TTF" bold="None" italic="KUDO11.TTF" bolditalic="None" src="KudosLight.swf" face="Kudos Light SSi, Light"></font>
+    <font id="32" file="K004004D.TTF" bold="None" italic="None" bolditalic="None" src="Kunstlerschreibsch.swf" face="Kunstlerschreidbsch DMed"></font>
+    <font id="33" file="KURIO1.TTF" bold="None" italic="None" bolditalic="None" src="Kuriakos.swf" face="Kuriakos SSi"></font>
+    <font id="34" file="LETSW5.TTF" bold="None" italic="None" bolditalic="None" src="LetterSweater.swf" face="Letter Sweater Outline"></font>
+    <font id="35" file="M040000D.TTF" bold="None" italic="None" bolditalic="None" src="Mandarin.swf" face="Mandarin D"></font>
+    <font id="36" file="TT0982M_.TTF" bold="None" italic="None" bolditalic="None" src="Monterey.swf" face="Montercy Bt"></font>
+    <font id="37" file="MOTIF.TTF" bold="None" italic="None" bolditalic="None" src="MotifScript.swf" face="Motif Script SSi"></font>
+    <font id="38" file="THES1.TTF" bold="THES3.TTF" italic="THES2.TTF" bolditalic="THES4.TTF" src="ThesisSSi.swf" face="Thesis SSi"></font>
+  </data>
+</fonts>

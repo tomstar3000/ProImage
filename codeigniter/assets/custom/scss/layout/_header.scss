@@ -1,0 +1,17 @@
+/* Layout rules */
+// Layout rules divide the page into sections. 
+// Layouts hold one or more modules together.
+
+header{
+  position: relative;
+
+  .logo{
+    // padding-top: 17px;
+    padding-top: 2.27vw;
+    
+    // width: 182px;
+    // width: 24.27vw;
+    width: 23.71vw;
+    margin: 0 auto;
+  }
+}

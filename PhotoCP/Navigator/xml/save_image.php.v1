@@ -1,0 +1,192 @@
+<? if(isset($r_path)===false){ $count = count(explode("/",substr($_SERVER['PHP_SELF'], 1)))-1; $r_path = "";	for($n=0;$n<$count;$n++)$r_path .= "../"; }
+$RealPath = $r_path; $r_path = '../';
+define ("PhotoExpress Pro", true);
+require_once $r_path.'includes/cp_connection.php';
+require_once $r_path.'scripts/encrypt.php';
+require_once $r_path.'scripts/fnct_clean_entry.php';
+$galleryPath = $RealPath."photographers/";
+$IconPath = "Icon/";
+$ThumbnailsPath = "Thumbnails/";
+$LargePath = "Large/";
+//$absGalleryPath = $galleryPath."/";
+$absGalleryPath = realpath($galleryPath)."/";
+
+$FID = isset($_GET['fid']) ? trim(clean_variable($_GET['fid'],true)) : 0;
+$EID = isset($_GET['event']) ? trim(clean_variable(decrypt_data(base64_decode($_GET['event'])),true)) : "Test";
+
+if($use_ftp === true){
+	$file_mrk = $absGalleryPath.$folderName."/".$eventFolderName."/ExtractDump.txt";
+	$filePtr = @fopen("ftp://".$ftp_user_name.":".$ftp_user_pass."@".$ftp_server.$file_mrk, "a");
+} else {
+	$file_mrk = $absGalleryPath.$folderName."/".$eventFolderName."/ExtractDump.txt";
+	$filePtr = fopen($file_mrk, "a");
+}
+if($filePtr){
+	$data = "--------------------------------------------\n";
+	$data .= "Date = ".date("Y-m-d H:i:s")."\n";
+	fwrite($filePtr, $data);
+	fclose($filePtr);
+}
+
+$getRcrds = new sql_processor($database_cp_connection,$cp_connection,$gateways_cp_connection);
+$getRcrds->mysql("SELECT `cust_customers`.`cust_id`, `cust_customers`.`cust_handle`, `photo_event`.`event_num` FROM `cust_customers` INNER JOIN `photo_event` ON `cust_customers`.`cust_id` = `photo_event`.`cust_id` WHERE `event_id` = '$EID' AND `event_use` = 'y';");
+
+if($getRcrds->TotalRows() == 0){ echo "Hacking"; die(); }
+$getRcrds = $getRcrds->Rows();
+$Cust_id = $getRcrds[0]['cust_id'];
+$folderName = $getRcrds[0]['cust_handle'];
+$Event_name = $getRcrds[0]['event_num'];
+function cleanName($VAL){
+	$VAL = mb_convert_encoding($VAL,'UTF-8','HTML-ENTITIES');
+	$VAL = str_replace(array("&amp;","&#039;"),array("&","'"),$VAL);
+	return eregi_replace("/[^a-zA-Z0-9& \._\-][^[:space:]]/","",$VAL);
+}
+
+function saveUploadedFiles(){
+	global $Event_name,$folderName,$EID,$FID,$filePtr,$Parnt_Group_id,$Cust_id,$galleryPath,$absGalleryPath,$LargePath,$ThumbnailsPath,$IconPath,$ftp_server,$ftp_user_name,$ftp_user_pass, $use_ftp,$database_cp_connection,$cp_connection,$gateways_cp_connection;
+	
+	$eventFolderName = $Event_name;
+	if(intval($FID)!=0){
+		$getRcrds = new sql_processor($database_cp_connection,$cp_connection,$gateways_cp_connection);
+		$getRcrds->mysql("SELECT `group_name` FROM `photo_event_group` WHERE `group_id` = '$FID';");
+		$getRcrds = $getRcrds->Rows();
+
+		$groupFolderName = cleanName($getRcrds[0]['group_name']);
+		
+		$fileName = str_replace("\\","/",clean_variable($_POST['FileName_1']));
+		$fileName = explode("/",$fileName);
+		$fileName = $fileName[count($fileName)-1];
+	}	else {
+		$groupFolderName = str_replace("\\","/",clean_variable($_POST['FileName_1']));
+		$groupFolderName = explode("/",$groupFolderName);
+		$fileName = $groupFolderName[count($groupFolderName)-1];
+		$groupFolderName = $groupFolderName[count($groupFolderName)-2];
+		if($groupFolderName == "") $groupFolderName = "Unamed Group";
+		
+		$groupFolderName = clean_variable($groupFolderName,true);
+		$groupFolderName = cleanName($getRcrds[0]['group_name']);
+		
+		$getRcrds = new sql_processor($database_cp_connection,$cp_connection,$gateways_cp_connection);
+		$getRcrds->mysql("SELECT `group_id` FROM `photo_event_group` WHERE `event_id` = '$EID' AND `group_name` = '".str_replace("'","''",$groupFolderName)."' AND `parnt_group_id` = '0' ORDER BY `group_id` DESC LIMIT 0,1;");
+		
+		if($getRcrds->TotalRows() == 0){
+			$getRcrds->mysql("INSERT INTO `photo_event_group` (`event_id`,`parnt_group_id`,`group_name`,`group_use`) VALUES ('$EID','0','".str_replace("'","''",$groupFolderName)."','y');");
+		
+			$getRcrds->mysql("SELECT `group_id` FROM `photo_event_group` WHERE `event_id` = '$EID' AND `group_name` = '".str_replace("'","''",$groupFolderName)."' AND `parnt_group_id` = '0' ORDER BY `group_id` DESC LIMIT 0,1;");
+			$getRcrds = $getRcrds->Rows();
+			$FID = $getRcrds[0]['group_id'];
+		} else {
+			$getRcrds = $getRcrds->Rows();
+			$FID = $getRcrds[0]['group_id'];
+			$getRcrds = new sql_processor($database_cp_connection,$cp_connection,$gateways_cp_connection);
+			$getRcrds->mysql("UPDATE `photo_event_group` SET `group_use` = 'y' WHERE `group_id` = '$FID';");
+		}
+	}
+	$fileName = eregi_replace("[^A-Za-z0-9\.]","",$fileName);
+	
+	$ImagePath = substr(md5($folderName),5,10)."/";
+	if($use_ftp === true){ $conn_id = ftp_connect($ftp_server); $login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass); } 
+	
+  if(!is_dir($absGalleryPath.$folderName)){
+		if($use_ftp === true){ ftp_mkdir($conn_id, $absGalleryPath.$folderName);
+		} else { mkdir($absGalleryPath.$folderName); }
+	}
+	if(!is_dir($absGalleryPath.$folderName."/".$eventFolderName)){
+		if($use_ftp === true){ ftp_mkdir($conn_id, $absGalleryPath.$folderName."/".$eventFolderName);
+		} else { mkdir($absGalleryPath.$folderName."/".$eventFolderName);	}
+	}
+	
+	if(!is_dir($absGalleryPath.$folderName."/".$eventFolderName."/".$groupFolderName)){
+		if($use_ftp === true){
+			ftp_mkdir($conn_id, $absGalleryPath.$folderName."/".$eventFolderName."/".$groupFolderName);
+			ftp_mkdir($conn_id, $absGalleryPath.$folderName."/".$eventFolderName."/".$groupFolderName."/".$ImagePath);
+			ftp_mkdir($conn_id, $absGalleryPath.$folderName."/".$eventFolderName."/".$groupFolderName."/".$LargePath);
+			//ftp_mkdir($conn_id, $absGalleryPath.$folderName."/".$eventFolderName."/".$groupFolderName."/".$ThumbnailsPath);
+			//ftp_mkdir($conn_id, $absGalleryPath.$folderName."/".$eventFolderName."/".$groupFolderName."/".$IconPath);
+		} else {	
+			mkdir($absGalleryPath.$folderName."/".$eventFolderName."/".$groupFolderName);
+			mkdir($absGalleryPath.$folderName."/".$eventFolderName."/".$groupFolderName."/".$ImagePath);
+			mkdir($absGalleryPath.$folderName."/".$eventFolderName."/".$groupFolderName."/".$LargePath);
+			//mkdir($absGalleryPath.$folderName."/".$eventFolderName."/".$groupFolderName."/".$ThumbnailsPath);
+			//mkdir($absGalleryPath.$folderName."/".$eventFolderName."/".$groupFolderName."/".$IconPath);
+		}
+	}	
+	/* Demo is not pathed the same so need to uncomment this part and comment out lower section to upload to the correct folder.
+	$absImagePath = $absGalleryPath.$folderName."/".$eventFolderName."/".$groupFolderName."/".$ImagePath."/";
+	$absIconPath = $absGalleryPath.$folderName."/".$eventFolderName."/".$groupFolderName."/".$IconPath."/";
+	$absThumbnailsPath = $absGalleryPath.$folderName."/".$eventFolderName."/".$groupFolderName."/".$ThumbnailsPath."/";
+	$absLargePath = $absGalleryPath.$folderName."/".$eventFolderName."/".$groupFolderName."/".$LargePath."/"; */
+	
+	$absImagePath = realpath($absGalleryPath.$folderName."/".$eventFolderName."/".$groupFolderName."/".$ImagePath)."/";
+	$absLargePath = realpath($absGalleryPath.$folderName."/".$eventFolderName."/".$groupFolderName."/".$LargePath)."/"; 
+	//$absIconPath = realpath($absGalleryPath.$folderName."/".$eventFolderName."/".$groupFolderName."/".$IconPath)."/";
+	//$absThumbnailsPath = realpath($absGalleryPath.$folderName."/".$eventFolderName."/".$groupFolderName."/".$ThumbnailsPath)."/";
+	
+	if (!$_FILES["SourceFile_1"]['size'])	return;
+	//if (!$_FILES["Thumbnail1_1"]['size'])	return;
+	//if (!$_FILES["Thumbnail2_1"]['size'])	return;
+	if (!$_FILES["Thumbnail3_1"]['size'])	return;
+	
+	$Angle = clean_variable($_POST['Angle_1'],true);
+	if($filePtr){
+		$data .= "************************\n";
+		$data .= "****** Successful ******\n";
+		$data .= "************************\n";
+		$data .= "Groupname = ".$groupFolderName."\n";
+		$data .= "FileName = ".$fileName."\n";
+		$data .= "Rotation = ".$Angle."\n";
+		$data .= "** Source **\n";
+		$data .= "Temp = ".$_FILES["SourceFile_1"]['tmp_name']."\n";
+		$data .= "Size = ".$_FILES["SourceFile_1"]['size']."\n";
+		$data .= "Type = ".$_FILES["SourceFile_1"]['type']."\n";
+		list($Width, $Height) = getimagesize($_FILES["SourceFile_1"]['tmp_name']);
+		$data .= "Deminsions = ".$Width." x ".$Height."\n";		
+		$data .= "** File 1 **\n";
+		//$data .= "Temp = ".$_FILES["Thumbnail1_1"]['tmp_name']."\n";
+		//$data .= "Size = ".$_FILES["Thumbnail1_1"]['size']."\n";
+		//$data .= "Type = ".$_FILES["Thumbnail1_1"]['type']."\n";
+		//list($Width, $Height) = getimagesize($_FILES["Thumbnail1_1"]['tmp_name']);
+		//$data .= "Deminsions = ".$Width." x ".$Height."\n";
+		$data .= "** File 2 **\n";
+		//$data .= "Temp = ".$_FILES["Thumbnail2_1"]['tmp_name']."\n";
+		//$data .= "Size = ".$_FILES["Thumbnail2_1"]['size']."\n";
+		//$data .= "Type = ".$_FILES["Thumbnail2_1"]['type']."\n";
+		//list($Width, $Height) = getimagesize($_FILES["Thumbnail2_1"]['tmp_name']);
+		$data .= "Deminsions = ".$Width." x ".$Height."\n";
+		$data .= "** File 3 **\n";
+		$data .= "Temp = ".$_FILES["Thumbnail3_1"]['tmp_name']."\n";
+		$data .= "Size = ".$_FILES["Thumbnail3_1"]['size']."\n";
+		$data .= "Type = ".$_FILES["Thumbnail3_1"]['type']."\n";
+		list($Width, $Height) = getimagesize($_FILES["Thumbnail3_1"]['tmp_name']);
+		$data .= "Deminsions = ".$Width." x ".$Height."\n";
+		@fwrite($filePtr, $data);
+		@fclose($filePtr);
+	}
+	
+	if($use_ftp === true){
+		ftp_put($conn_id, $absImagePath.$fileName, $_FILES["SourceFile_1"]['tmp_name'], FTP_BINARY);
+		//ftp_put($conn_id, $absIconPath.$fileName, $_FILES["Thumbnail1_1"]['tmp_name'], FTP_BINARY);
+		//ftp_put($conn_id, $absThumbnailsPath.$fileName, $_FILES["Thumbnail2_1"]['tmp_name'], FTP_BINARY);
+		ftp_put($conn_id, $absLargePath.$fileName, $_FILES["Thumbnail3_1"]['tmp_name'], FTP_BINARY);
+	} else {
+		copy($_FILES["SourceFile_1"]['tmp_name'], $absImagePath.$fileName);
+		//copy($_FILES["Thumbnail1_1"]['tmp_name'], $absIconPath.$fileName);
+		//copy($_FILES["Thumbnail2_1"]['tmp_name'], $absThumbnailsPath.$fileName);
+		copy($_FILES["Thumbnail3_1"]['tmp_name'], $absLargePath.$fileName);
+	}
+	$size = $_FILES['SourceFile_1']['size']/1048576;
+	$time = time();
+	$folder = $galleryPath.$folderName."/".$eventFolderName."/".$groupFolderName."/".$ImagePath;
+	$folder = str_replace("../","",$folder);
+	$folder = clean_variable($folder, true);
+	$fileName = clean_variable($fileName, true);
+	
+	$getRcrds = new sql_processor($database_cp_connection,$cp_connection,$gateways_cp_connection);
+	$getRcrds->mysql("INSERT INTO `photo_event_images` (`cust_id`,`group_id`,`image_tiny`,`image_small`,`image_large`,`image_folder`,`image_size`,`imgage_org_rotate`,`image_time`,`image_active`) VALUES ('$Cust_id','$FID','$fileName','$fileName','$fileName','$folder','$size','$Angle','$time','y');");
+	
+	$getRcrds->mysql("UPDATE `photo_event_group` SET `group_updated` = NOW() WHERE `group_id` = '$FID';");
+	
+	$getRcrds->mysql("UPDATE `photo_event` SET `event_updated` = NOW() WHERE `event_id` = '$EID';");
+}
+saveUploadedFiles();
+?>

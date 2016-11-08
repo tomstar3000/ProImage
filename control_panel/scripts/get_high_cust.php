@@ -1,0 +1,7 @@
+<?php
+//mysql_select_db($database_cp_connection, $cp_connection);
+$query_get_customers = "SELECT `cust_shipping`.*, `orders_invoice`.`ship_speed_id`, `billship_shipping_speeds`.`ship_speed_name`, `billship_shipping_companies`.`ship_comp_name` FROM `orders_invoice` LEFT OUTER JOIN `orders_invoice_prod` ON `orders_invoice_prod`.`invoice_id` = `orders_invoice`.`invoice_id` LEFT OUTER JOIN `prod_products` ON `prod_products`.`prod_id` = `orders_invoice_prod`.`prod_id` LEFT OUTER JOIN `sellers` ON `sellers`.`sell_id` = `prod_products`.`sell_id` LEFT OUTER JOIN `cust_shipping` ON `cust_shipping`.`cust_ship_id` = `orders_invoice`.`cust_ship_id` LEFT OUTER JOIN `billship_shipping_speeds` ON `billship_shipping_speeds`.`ship_speed_id` = `orders_invoice`.`ship_speed_id` LEFT OUTER JOIN `billship_shipping_companies` ON `billship_shipping_companies`.`ship_comp_id` = `billship_shipping_speeds`.`ship_comp_id` WHERE `sellers`.`sell_id` = '$man_id' AND `orders_invoice`.`invoice_date` >= '$first_date' AND `orders_invoice`.`invoice_date` < '$last_date' GROUP BY `orders_invoice`.`cust_ship_id` ASC, `orders_invoice`.`ship_speed_id` ORDER BY `cust_shipping`.`cust_ship_lname` ASC, `cust_shipping`.`cust_ship_fname` ASC, `cust_shipping`.`cust_ship_cname` ASC";
+$get_customers = mysql_query($query_get_customers, $cp_connection) or die(mysql_error());
+$row_get_customers = mysql_fetch_assoc($get_customers);
+$totalRows_get_customers = mysql_num_rows($get_customers);
+?>

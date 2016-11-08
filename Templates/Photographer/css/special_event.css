@@ -1,0 +1,131 @@
+body, html {
+	margin:0px;
+	padding:0px;
+	color: #4f3912;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	word-wrap: break-word;
+}
+h1, p {
+	color: #4f3912;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	word-wrap: break-word;
+	text-align: left;
+}
+h1 {
+	font-size:24px;
+}
+table {
+	width: 100%;
+	background-color: #FFFFFF;
+	background-image: url(/Templates/Photographer/images/bg_background.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+	margin:0px;
+	padding:0px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+table table {
+	width:650px;
+	margin-left:auto;
+	margin-right:auto;
+	background:none;
+	background-color:transparent;
+	display: block;
+}
+a {
+	color: #4F3912;
+	text-decoration: underline;
+}
+.AlgnRght {
+	text-align: right;
+}
+
+.Tiny {
+	font-size: 10px;
+	font-weight: bold;
+}
+.Coupons {
+	background-image: url(/Templates/Photographer/images/bg_coupon.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+.Coupons table {
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #4f3912;
+}
+.Coupon1, .Coupon2 {
+	width: 325px;
+}
+.Coupon1 .Large, .Coupon2 .Large {
+	background-image: url(/Templates/Photographer/images/bg_Coupon_1.jpg);
+	width: 308px;
+	margin-right: 9px;
+	margin-left: 8px;
+	background-repeat: no-repeat;
+	background-position: left top;
+	color: #c08e39;
+	margin-top: 20px;
+	padding-top: 20px;
+	padding-right: 5px;
+	padding-bottom: 28px;
+	padding-left: 15px;
+	margin-bottom: 0px;
+	display: block;
+}
+.Coupon1 .Large {
+	height: 99px;
+}
+.Coupon2 .Large {
+	background-image: url(/Templates/Photographer/images/bg_Coupon_2.jpg);
+}
+.Coupon1 .Large strong, .Coupon2 .Large strong {
+	font-size: 24px;
+}
+.Coupon1 .Small, .Coupon2 .Small {
+	font-size: 10px;
+	padding-right: 9px;
+	padding-left: 9px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 0px;
+}
+.CstmBorder {
+	border: 3px solid #c89441;
+}
+.Large {
+	font-size: 16px;
+	text-transform: uppercase;
+}
+.Footer {
+	background-image: url(/Templates/Photographer/images/bg_footer.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+.Footer table p, .Footer table p a {
+	height: 50px;
+	color: #9c7025;
+	font-weight: bold;
+	font-size: 10px;
+}
+.InjectImage {
+	margin: 0px;
+	padding: 0px;
+	clear: none;
+	float: right;
+	width: 300px;
+}
+.InjectImage table {
+	width: auto;
+	margin-right: auto;
+	margin-left: auto;
+}

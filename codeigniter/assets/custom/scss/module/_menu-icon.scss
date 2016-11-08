@@ -1,0 +1,88 @@
+/*
+ * Box: display, float, position, left, top, height, width
+ * Border
+ * Background
+ * Text
+ * Other
+*/
+
+.menu-icon {
+  position: absolute;
+  display:  inline-block;
+  // width: 63px;
+  // width: 8.4vw;
+  // height: 43px;
+  height: 5.73vw;
+  // top: 26px;
+  top: 3.47vw;
+  // left: 50px;
+  left: 6.67vw;
+
+  outline: none !important;
+  z-index: 3;
+
+  span {
+    // margin: 0 auto;
+    position: relative;
+    // top: 16.5px;
+    top: 2.2vw;
+
+    -webkit-transition-property: background-color; transition-property: background-color;
+    -webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+
+    &:before {
+      // margin-top: -16.5px;
+      margin-top: -2.2vw;
+    }
+    &:after {
+      // margin-top: 16.5px;
+      margin-top: 2.2vw;
+    }
+    &:before, &:after {
+      position: absolute;
+      content: '';
+      -webkit-transition-property: margin, -webkit-transform, background-color; transition-property: margin, transform, background-color;
+      -webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+      -webkit-transition-delay: 0.2s, 0s, 0s; transition-delay: 0.2s, 0s, 0s;
+    }
+  }
+
+  span, span:before, span:after {
+    // width: 60px;
+    width: 8vw;
+    // height: 7px;
+    height: 0.93vw;
+    display: block;
+
+    background-color: $header-menu-item-font-color;
+    border-radius: 0.4vw;//4px;
+    // border-radius: 0.53vw;
+  }
+  &:hover {
+    span, span:before, span:after {
+      background-color: $header-menu-item-font-hover-color;
+    }
+  }
+
+  &.active {
+    span{
+      background-color: rgba( 255, 255, 255, 0.0 );
+
+      -webkit-transition-delay: 0.2s; 
+      transition-delay: 0.2s;
+
+      &:before {
+        margin-top: 0;
+
+        -webkit-transform: rotate(45deg); transform: rotate(45deg);
+        -webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+      }
+      &:after {
+        margin-top: 0;
+
+        -webkit-transform: rotate(-45deg); transform: rotate(-45deg);
+        -webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+      }
+    }
+  }
+}

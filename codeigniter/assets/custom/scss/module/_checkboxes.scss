@@ -1,0 +1,65 @@
+.checkboxes, .checkboxes-inline{
+  /* prevent accidental selection when clicking */
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin-right: 1.95vw;//15px;
+
+    label {
+      cursor: pointer;
+      margin-right: 0;
+      font-weight: normal;
+      
+      input {
+        display: none;
+        margin: 0 0.26vw;//0 2px; /* same as .icon padding */
+      }
+      .icon {
+        margin: 0 0.65vw 0 0;//0 5px 0 0;
+        padding: 0 0.26vw;//0 2px;
+        display: inline-block;
+
+        border: 1px solid $light-grey;//$border-color;
+        border-radius: 0.4vw;//4px;
+
+
+        text-align: center;
+        font-size: 4.17vw;//32px;
+        color: $dark-green;//$sh-blue;
+        line-height: 4.56vw;//35px;
+        vertical-align: text-bottom;
+        /**
+         * line-height value may need to be adjusted 
+         * depending on your font.
+         */
+
+        .fa {
+          visibility: hidden;
+        }
+      }
+
+      input:checked + .icon{
+        background-color: #f6f6f6;
+
+        .fa {
+          visibility: visible;
+        }
+      }
+    }
+    + li{
+      margin-top: 1.3vw;//10px;
+    }
+  }
+}
+
+.checkboxes-inline{
+  li {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,1 @@
+<img src="/image/album_coming_soon.jpg" alt="Album Designer: Coming Spring of '09" width="777" height="288" />

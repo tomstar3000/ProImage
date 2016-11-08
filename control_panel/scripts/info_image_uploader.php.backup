@@ -1,0 +1,196 @@
+<?php
+if(isset($r_path)===false){
+	$count = count(explode("/",substr($_SERVER['PHP_SELF'], 1)))-2;
+	$r_path = "";
+	for($n=0;$n<$count;$n++){
+		$r_path .= "../";
+	}
+}
+include $r_path.'security.php';
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Aurigma Image Uploader</title>
+<meta http-equiv="MSThemeCompatible" content="yes" />
+<script src="/Aurigma/v_4/iuembed.js" type="text/javascript"></script>
+<script src="/Aurigma/v_4/script.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[	
+function formatFileSize(value){
+	if (value < 1024){
+		return value + " b";
+	} else if (value < 1048576){
+		return Math.round(value / 1024) + " Kb";
+	} else if (value < 1073741824){
+		return Math.round(value / 10485.76) / 100 + " Mb";
+	} else {
+		return Math.round(value / 10737418.24) / 100 + " Gb";
+	}
+}
+//]]>
+</script>
+</head>
+<body>
+<div id="Sub_Header"> <img src="/control_panel/images/hdr_form_left.jpg" width="17" height="33" border="0" align="left" />
+  <h2>Load Images </h2>
+  <p id="Select_All"><a href="#" onclick="imageUploader1.SelectAll();return false;">Select&nbsp;All</a></p>
+  <p id="Deselect_All"><a href="#" onclick="imageUploader1.DeselectAll();return false;">Deselect&nbsp;All</a></p>
+  <p id="Upload"><a href="#" onclick="imageUploader1.Send();return false;">Upload</a></p>
+  <p id="Refresh"><a href="#" onclick="imageUploader1.Refresh();return false;">Refresh</a></p>
+  <p id="View">
+    <select id="selectView" onchange="selectView_change();">
+      <option value="0" selected="selected">Thumbnails</option>
+      <option value="1">Icons</option>
+      <option value="2">List</option>
+      <option value="3">Details</option>
+    </select>
+  </p>
+  <p id="Back"><a href="#" onclick="javascript:set_form('form_','<?php echo implode(",",$path); ?>','view','<?php echo $sort; ?>','<?php echo $rcrd; ?>');">Back</a></p>
+</div>
+<div>
+  <div id="Info">
+    <p><strong><span id="spanUploadFileCount">0</span></strong>&nbsp;images selected</p>
+    <p>
+      <?	if(strstr(strtolower($_SERVER['HTTP_USER_AGENT']),"msie") !== false){ ?>
+      Notice that we are using Aurigma 4.5.35.0<br />
+      If you are having problems <a href="#" onclick="javascript:window.open('/control_panel/browser_activex.html','ProImageSoftware','width=600,height=300,scrollbars=no,menubar=no,resizable=yes,toolbar=no,location=no,status=no');">Click
+      Here to learn how to</a> clean your Active X Controllers.
+      <? } else { ?>
+      Notice that we are using Aurigma 2.5.35.0<br />
+      If you are having problems <a href="#" onclick="javascript:window.open('/control_panel/browser_cache.html','ProImageSoftware','width=600,height=300,scrollbars=yes,menubar=no,resizable=yes,toolbar=no,location=no,status=no');">Click Here to learn how to</a> clean your browser cache.
+      <? } ?></p>
+    <p style="display:none"><span id="spanMaxFileCount">x</span></p>
+    <img id="imgUploadFileCount" src="/images/spacer.gif" style="display:none" />
+    <p style="display:none"><span id="spanMaxTotalFileSize">x</span></p>
+    <p style="display:none"><span id="spanTotalFileSize">0</span></p>
+    <img id="imgTotalFileSize" src="/images/spacer.gif" style="display:none;" /> </div>
+</div>
+<div>
+  <div>
+    <script type="text/javascript">
+//Create JavaScript object that will embed Image Uploader to the page.
+var iu = new ImageUploaderWriter("ImageUploader1", 800, 650);
+
+//For ActiveX control full path to CAB file (including file name) should be specified.
+iu.activeXControlCodeBase = "/Aurigma/v_4.5/ImageUploader4.cab";
+iu.activeXControlVersion = "4,5,35,0";
+
+//For Java applet only path to directory with JAR files should be specified (without file name).
+/*
+iu.javaAppletCodeBase = "/Aurigma/v_3/";
+iu.javaAppletCached = true;
+iu.javaAppletVersion = "1.0.12.0";
+*/
+iu.javaAppletCodeBase = "/Aurigma/v_4.5/";
+iu.javaAppletCached = true;
+iu.javaAppletVersion = "2.5.35.0";
+
+iu.showNonemptyResponse = "off";
+iu.addParam("RememberLastVisitedFolder", "true");
+<?php if($Group === false){ ?>
+//Configure appearance and behaviour.
+iu.addParam("PaneLayout", "TwoPanes");
+iu.addParam("FolderView", "Thumbnails");
+iu.addParam("TreePaneWidth", "205");
+iu.addParam("ThumbnailHorizontalSpacing", "5");
+iu.addParam("ThumbnailVerticalSpacing", "1");
+iu.addParam("ShowUploadListButtons", "true");
+iu.addParam("ShowButtons", "false");
+//iu.addParam("MaxFileCount", "100");
+iu.addParam("MaxFileSize", "20971520");
+iu.addParam("FileIsTooLargeText", "Larger than 20 Mb");
+iu.addParam("ShowSubfolders", "true");
+iu.addParam("AllowMultipleRotate", "true");
+iu.addParam("AllowFolderUpload", "true");
+iu.addParam("Action", "<?php echo $r_path; ?>scripts/save_file_uploader.php?folder=<?php echo $Name; ?>&event=<?php echo time().$path[2]; ?>&token=<?php echo session_id(); if(isset($_GET['admin'])) echo '&admin='.$_GET['admin'].'&adminid='.$_GET['adminid']; ?>");
+iu.addParam("RedirectUrl", "<?php echo $_SERVER['PHP_SELF']; ?>?uploaded=true&id=<?php echo time().$path[2]; ?><?php if($token!="")echo "&".$token; ?>");
+<?php } else { ?>
+iu.addParam("PaneLayout", "ThreePanes");
+iu.addParam("FolderView", "Thumbnails");
+iu.addParam("TreePaneWidth", "205");
+iu.addParam("ThumbnailHorizontalSpacing", "5");
+iu.addParam("ThumbnailVerticalSpacing", "1");
+iu.addParam("ShowUploadListButtons", "true");
+iu.addParam("ShowButtons", "false");
+//iu.addParam("MaxFileCount", "100");
+iu.addParam("MaxFileSize", "20971520");
+iu.addParam("FileIsTooLargeText", "Larger than 20 Mb");
+iu.addParam("ShowSubfolders", "true");
+iu.addParam("AllowMultipleRotate", "true");
+iu.addParam("AllowFolderUpload", "false");
+iu.addParam("Action", "<?php echo $r_path; ?>scripts/save_file_uploader.php?folder=<?php echo $Name; ?>&event=<?php echo time().$path[2]; ?>&group=<?php echo urlencode($Group); ?>&id=<?php echo $GId; if($token!="")echo "&".$token;?>");
+//Configure URL where to redirect after upload.
+iu.addParam("RedirectUrl", "<?php echo $_SERVER['PHP_SELF']; ?>?updated=true&id=<?php echo time().$path[2]; ?>&<?php if($token!="")echo "&".$token; ?>");
+<?php 
+}
+if($MBLeft <= 750){
+	$MaxTotalFileSize = $MBLeft*1024;
+	echo 'iu.addParam("MaxTotalFileSize", "'.$MaxTotalFileSize.'");';
+}/* else {
+	$MaxTotalFileSize = ($MBLeft < 750) ? $MBLeft*1024 : '786432000';
+}  ?> */ ?>
+//iu.addParam("ButtonRemoveFromUploadListText", "");
+iu.addParam("ShowDescriptions", "false");
+iu.addParam("ShowContextMenu", "true");
+//Configure colors.
+iu.addParam("BackgroundColor", "#ffffff");
+iu.addParam("SplitterLineColor", "#0066cc");
+//Configure border and splitter line style.
+iu.addParam("FolderPaneHeight", "250");
+iu.addParam("PreviewThumbnailSize", "75");
+//Configure Progress Bar
+iu.addParam("HoursText", "Hour");
+iu.addParam("MinutesText", "Min");
+iu.addParam("SecondsText", "Sec");
+//Configure thumbnail settings.
+iu.addParam("UploadThumbnail1FitMode", "Fit");
+iu.addParam("UploadThumbnail1Width", "195");
+iu.addParam("UploadThumbnail1Height", "195");
+iu.addParam("UploadThumbnail1JpegQuality", "60");
+iu.addParam("UploadThumbnail1CopyExif", "true");
+iu.addParam("UploadThumbnail1ResizeQuality", "high"); 
+//Configure thumbnail settings.
+iu.addParam("UploadThumbnail2FitMode", "Fit");
+iu.addParam("UploadThumbnail2Width", "630");
+iu.addParam("UploadThumbnail2Height", "630");
+iu.addParam("UploadThumbnail2JpegQuality", "70");
+iu.addParam("UploadThumbnail2CopyExif", "true");
+iu.addParam("UploadThumbnail2ResizeQuality", "high");
+//Configure thumbnail settings.
+iu.addParam("UploadThumbnail3FitMode", "Fit");
+iu.addParam("UploadThumbnail3Width", "960");
+iu.addParam("UploadThumbnail3Height", "640");
+iu.addParam("UploadThumbnail3JpegQuality", "90");
+iu.addParam("UploadThumbnail3CopyExif", "true");
+iu.addParam("UploadThumbnail3ResizeQuality", "high"); 
+//Configure upload settings.
+iu.addParam("FilesPerOnePackageCount", "1");
+iu.addParam("AutoRecoverMaxTriesCount", "5");
+iu.addParam("AutoRecoverTimeOut", "5000");
+iu.addParam("LicenseKey", "6375-7526-6373-9693;9264-9272-8784-8480");
+iu.addParam("FileMask", "*.jpg;*.jpeg;*.jpe;*.bmp;*.gif;*.png");
+iu.addParam("UploadSourceFile", "true");
+iu.addParam("ShowDebugWindow", "true");
+//Add event handlers.
+//iu.addEventListener("BeforeUpload", "ImageUploader_BeforeUpload");
+iu.addEventListener("UploadFileCountChange", "ImageUploader_UploadFileCountChange");
+iu.addEventListener("ViewChange", "ImageUploader_ViewChange");
+iu.fullPageLoadListenerName = "fullPageLoad";
+
+//Tell Image Uploader writer object to generate all necessary HTML code to embed 
+//Image Uploader to the page.
+iu.writeHtml();
+
+</script>
+  </div>
+  <!--
+  <div>
+    <div id="UploadPaneFrame">
+      <div id="UploadPane"></div>
+    </div>
+  </div>
+  -->
+</div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+@charset "utf-8";
+#Content #LeftPanel {
+	display: none;
+}
+#Floral #Logo {
+	display: none;
+}
+#Navigation #Floral ul {
+	display: none;
+}
+#MainNav #Left {
+	display: none;
+}
+#MainNav #Space #PhotoIcn {
+	display: none;
+}
+#MainNav #Space #StorageBar {
+	display: none;
+}
+#MainNav #Space p, #MainNav #Space h4 {
+	margin: 0px;
+	padding: 0px;
+}
+#MainNav #Right {
+	display: none;
+}
+#MainNav ul {
+	display: none;
+}
+#MainNav #SearchL {
+	display: none;
+}
+#MainNav form {
+	display: none;
+}
+#MainNav #SearchR {
+	display: none;
+}
+#MainNav #BdBtm {
+	display: none;
+}
+#MainNav #BdBtmR {
+	display: none;
+}
+#RecordTable blockquote {
+	margin: 0px;
+	padding: 0px;
+}
+#RecordTable blockquote h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #333333;
+	background-color: #CCCCCC;
+	text-align: center;
+	display: block;
+	margin: 0px;
+	padding: 2px;
+	clear: none;
+	float: left;
+	height: auto;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #333333;
+}
+#RecordTable blockquote h1.B, #RecordTable blockquote p.B {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+#RecordTable blockquote p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #333333;
+	text-align: left;
+	display: block;
+	margin: 0px;
+	padding: 2px;
+	clear: none;
+	float: left;
+	height: auto;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #333333;
+}
+.Breaker, #RecordTable blockquote .Breaker {
+	display:none;
+}
+#RecordTable blockquote #RC1 {
+	width:180px;
+}
+#RecordTable blockquote #RC1A {
+	width:261px;
+}
+#RecordTable blockquote #RC1B {
+	width:330px;
+	text-align:right;
+}
+#RecordTable blockquote #RC2 {
+	width:65px;
+}
+#RecordTable blockquote #RC3 {
+	width:75px;
+}
+#RecordTable blockquote #RC4 {
+	width:65px;
+}
+#RecordTable blockquote #RC5 {
+	width:65px;
+}
+#RecordTable blockquote #RC6 {
+	width:65px;
+}
+#RecordTable blockquote #RC7 {
+	width:100px;
+}

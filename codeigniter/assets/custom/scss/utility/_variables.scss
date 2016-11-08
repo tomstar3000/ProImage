@@ -1,0 +1,37 @@
+/* start widths */
+//$mobile-gutter:             50px;
+$mobile-gutter:                           6.67vw;
+
+//$footer-top-margin:         70px;
+$footer-top-margin:                       9.33vw;
+
+//$footer-bottom-margin:     36px;
+$footer-bottom-margin:                    4.8vw;
+
+/* end widths */
+
+/* start colors */
+$dark-green:                              #3cc871;
+$bright-green:                            #61e694;
+$light-grey:                              #d9d9d9;
+$dark-grey:                               #747474;
+/* end colors */
+
+/* start colors for modules */
+$body-font-color:                         $dark-grey;
+$body-font-stack:                         'Lato', Helvetica, sans-serif;
+
+$header-menu-border-color:                #ccc;
+$header-menu-item-font-color:             $dark-green;
+$header-menu-item-font-hover-color:       $bright-green;
+
+$input-border-color:                      $light-grey;
+
+$footer-bg:                               $dark-grey;
+$footer-font-color:                       #2e2d2d;
+$footer-menu-item-font-hover-color:       $bright-green;
+/* end colors for modules */
+
+
+/* start measurements */
+$page-bottom-margin:                      5.21vw;//40px;

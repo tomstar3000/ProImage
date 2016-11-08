@@ -1,0 +1,23 @@
+.event-code-search{
+  margin-bottom: 6.06vw;//60px;
+
+  .instructions{
+    margin: 3.26vw 0 4.56vw;//25px 0 35px;
+    font-size: 2.6vw;//20px; //@ 768px
+    // font-size: 26.5px; //@ 992px
+
+    line-height: 1;
+    
+    text-align: right;
+    color: $dark-grey;
+
+    a, a:link, a:visited{
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  }
+
+  input{
+    text-align: center;
+  }
+}
